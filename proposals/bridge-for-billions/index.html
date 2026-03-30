@@ -1,0 +1,1318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bridge for Billions x SALTY Retreats — Proposal</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --teal: #0E3A2D;
+      --teal-light: #164D3C;
+      --navy: #0A1628;
+      --cream: #F7F4ED;
+      --white: #FFFFFF;
+      --sand: #D4A574;
+      --sand-light: #E7D7C0;
+      --coral: #F75A3D;
+      --gray-50: #FAFAF8;
+      --gray-100: #F0EDE6;
+      --gray-400: #8B8E94;
+      --gray-600: #4A4E58;
+      --gray-800: #1E2128;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-snap-type: y mandatory;
+      overflow-y: scroll;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: var(--teal);
+      background: var(--white);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* --- Progress Bar --- */
+    #progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3px;
+      background: var(--sand);
+      z-index: 1000;
+      transition: width 0.3s ease;
+      width: 0%;
+    }
+
+    /* --- Navigation Dots --- */
+    #nav-dots {
+      position: fixed;
+      right: 1.5rem;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 999;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    .nav-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: rgba(14, 58, 45, 0.2);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border: none;
+      padding: 0;
+    }
+    .nav-dot.active {
+      background: var(--sand);
+      transform: scale(1.4);
+    }
+    .nav-dot:hover {
+      background: var(--sand);
+      transform: scale(1.2);
+    }
+    .slide--dark ~ #nav-dots .nav-dot,
+    .nav-dot.on-dark {
+      background: rgba(255, 255, 255, 0.3);
+    }
+
+    /* --- Slide Base --- */
+    .slide {
+      min-height: 100vh;
+      scroll-snap-align: start;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 4rem 6rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* --- Slide Variants --- */
+    .slide--dark {
+      background: var(--teal);
+      color: var(--white);
+    }
+    .slide--navy {
+      background: var(--navy);
+      color: var(--white);
+    }
+    .slide--cream {
+      background: var(--cream);
+      color: var(--teal);
+    }
+    .slide--white {
+      background: var(--white);
+      color: var(--teal);
+    }
+
+    /* --- Cover Slide --- */
+    .slide--cover {
+      background: linear-gradient(135deg, var(--teal) 0%, var(--navy) 100%);
+      color: var(--white);
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+    .slide--cover::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url('https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?auto=format&fit=crop&w=1920&q=80') center/cover;
+      opacity: 0.15;
+    }
+    .cover-content {
+      position: relative;
+      z-index: 1;
+    }
+    .cover-logo {
+      width: 140px;
+      opacity: 0.9;
+      margin-bottom: 3rem;
+    }
+    .cover-collab {
+      font-size: 0.875rem;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--sand);
+      margin-bottom: 1rem;
+    }
+    .cover-title {
+      font-size: 3.5rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+    }
+    .cover-subtitle {
+      font-size: 1.25rem;
+      font-weight: 300;
+      color: rgba(255, 255, 255, 0.7);
+      margin-bottom: 3rem;
+    }
+    .cover-meta {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.4);
+      letter-spacing: 0.05em;
+    }
+
+    /* --- Image Slide (half image) --- */
+    .slide--split {
+      flex-direction: row;
+      padding: 0;
+    }
+    .split-image {
+      width: 45%;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+    .split-image::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, transparent 70%, var(--white) 100%);
+    }
+    .slide--dark .split-image::after {
+      background: linear-gradient(90deg, transparent 70%, var(--teal) 100%);
+    }
+    .split-content {
+      width: 55%;
+      padding: 4rem 5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    /* --- Typography --- */
+    .slide-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--sand);
+      margin-bottom: 1rem;
+    }
+    .slide--dark .slide-label,
+    .slide--navy .slide-label {
+      color: var(--sand);
+    }
+    .slide-title {
+      font-size: 2.75rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      margin-bottom: 0.75rem;
+    }
+    .slide-subtitle {
+      font-size: 1.1rem;
+      font-weight: 400;
+      color: var(--gray-600);
+      margin-bottom: 2.5rem;
+      line-height: 1.6;
+    }
+    .slide--dark .slide-subtitle,
+    .slide--navy .slide-subtitle {
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    /* --- Content Elements --- */
+    .bullet-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+    .bullet-list li {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+      line-height: 1.6;
+      font-size: 0.95rem;
+    }
+    .bullet-list li strong {
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    .bullet-icon {
+      width: 6px;
+      height: 6px;
+      min-width: 6px;
+      border-radius: 50%;
+      background: var(--sand);
+      margin-top: 0.55rem;
+    }
+    .slide--dark .bullet-list li {
+      color: rgba(255,255,255,0.85);
+    }
+
+    /* --- Process Steps --- */
+    .process-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .process-step {
+      display: flex;
+      align-items: flex-start;
+      gap: 1.5rem;
+      padding: 1.25rem 0;
+      position: relative;
+    }
+    .process-step:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      left: 19px;
+      top: 3.5rem;
+      bottom: 0;
+      width: 2px;
+      background: var(--sand-light);
+    }
+    .step-number {
+      width: 40px;
+      height: 40px;
+      min-width: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.875rem;
+      background: var(--cream);
+      color: var(--teal);
+      position: relative;
+      z-index: 1;
+    }
+    .step-number.active {
+      background: var(--sand);
+      color: var(--white);
+    }
+    .step-number.done {
+      background: var(--teal);
+      color: var(--white);
+    }
+    .step-content h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+    }
+    .step-content p {
+      font-size: 0.875rem;
+      color: var(--gray-600);
+      line-height: 1.6;
+    }
+    .step-badge {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 0.15rem 0.5rem;
+      border-radius: 4px;
+      margin-left: 0.5rem;
+      vertical-align: middle;
+    }
+    .step-badge--done {
+      background: rgba(14, 58, 45, 0.1);
+      color: var(--teal);
+    }
+    .step-badge--current {
+      background: rgba(212, 165, 116, 0.2);
+      color: var(--sand);
+    }
+
+    /* --- Comparison Table --- */
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.875rem;
+    }
+    .comparison-table th {
+      text-align: left;
+      padding: 1rem 1.25rem;
+      font-weight: 700;
+      font-size: 0.9rem;
+      border-bottom: 2px solid var(--teal);
+    }
+    .comparison-table th:not(:first-child) {
+      text-align: center;
+    }
+    .comparison-table td {
+      padding: 0.875rem 1.25rem;
+      border-bottom: 1px solid var(--gray-100);
+      vertical-align: top;
+      line-height: 1.5;
+    }
+    .comparison-table td:not(:first-child) {
+      text-align: center;
+    }
+    .comparison-table td:first-child {
+      font-weight: 600;
+      color: var(--teal);
+      white-space: nowrap;
+    }
+    .comparison-table tr:last-child td {
+      border-bottom: none;
+    }
+    .table-star {
+      color: var(--sand);
+      font-weight: 700;
+    }
+    .table-highlight {
+      background: rgba(212, 165, 116, 0.08);
+    }
+
+    /* --- Investment Table --- */
+    .investment-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.875rem;
+    }
+    .investment-table th {
+      text-align: left;
+      padding: 0.875rem 1.25rem;
+      font-weight: 700;
+      font-size: 0.8rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--gray-400);
+      border-bottom: 2px solid var(--teal);
+    }
+    .investment-table th:not(:first-child) {
+      text-align: right;
+    }
+    .investment-table td {
+      padding: 0.75rem 1.25rem;
+      border-bottom: 1px solid var(--gray-100);
+      line-height: 1.5;
+    }
+    .investment-table td:not(:first-child) {
+      text-align: right;
+      font-variant-numeric: tabular-nums;
+    }
+    .investment-table tr.total-row td {
+      font-weight: 700;
+      font-size: 1rem;
+      border-top: 2px solid var(--teal);
+      border-bottom: none;
+      padding-top: 1rem;
+    }
+    .investment-table tr.included-row td {
+      color: var(--gray-400);
+      font-style: italic;
+    }
+
+    /* --- Schedule Table --- */
+    .schedule-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.8rem;
+    }
+    .schedule-table th {
+      padding: 0.75rem 0.875rem;
+      font-weight: 700;
+      font-size: 0.75rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--white);
+      background: var(--teal);
+      text-align: left;
+    }
+    .schedule-table th:first-child {
+      border-radius: 8px 0 0 0;
+    }
+    .schedule-table th:last-child {
+      border-radius: 0 8px 0 0;
+    }
+    .schedule-table td {
+      padding: 0.625rem 0.875rem;
+      border-bottom: 1px solid var(--gray-100);
+      vertical-align: top;
+      line-height: 1.5;
+    }
+    .schedule-table td:first-child {
+      font-weight: 600;
+      color: var(--teal);
+      white-space: nowrap;
+    }
+    .schedule-star {
+      display: inline-block;
+      background: var(--sand);
+      color: white;
+      font-size: 0.65rem;
+      font-weight: 700;
+      padding: 0.1rem 0.4rem;
+      border-radius: 3px;
+      margin-left: 0.25rem;
+      vertical-align: middle;
+    }
+    .schedule-optional {
+      color: var(--gray-400);
+      font-style: italic;
+      font-size: 0.75rem;
+    }
+
+    /* --- Management Grid --- */
+    .mgmt-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+    .mgmt-item {
+      padding: 1.25rem 1.5rem;
+      background: var(--gray-50);
+      border-radius: 12px;
+      border-left: 3px solid var(--sand);
+    }
+    .mgmt-item h3 {
+      font-size: 0.9rem;
+      font-weight: 700;
+      margin-bottom: 0.375rem;
+    }
+    .mgmt-item p {
+      font-size: 0.825rem;
+      line-height: 1.6;
+      color: var(--gray-600);
+    }
+
+    /* --- Next Steps --- */
+    .next-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    .next-step {
+      display: flex;
+      gap: 1.25rem;
+      align-items: flex-start;
+    }
+    .next-step-num {
+      width: 36px;
+      height: 36px;
+      min-width: 36px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 0.95rem;
+      color: var(--white);
+    }
+    .next-step-num.ns-1 { background: var(--coral); }
+    .next-step-num.ns-2 { background: var(--sand); }
+    .next-step-num.ns-3 { background: var(--teal-light); }
+    .next-step-num.ns-4 { background: var(--gray-600); }
+    .next-step-content h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+    }
+    .next-step-content p {
+      font-size: 0.875rem;
+      color: var(--gray-600);
+      line-height: 1.6;
+    }
+
+    /* --- Urgency Banner --- */
+    .urgency-banner {
+      margin-top: 2.5rem;
+      padding: 1.25rem 1.5rem;
+      background: rgba(212, 165, 116, 0.12);
+      border: 1px solid rgba(212, 165, 116, 0.3);
+      border-radius: 10px;
+      font-size: 0.875rem;
+      line-height: 1.6;
+      color: var(--teal);
+    }
+
+    /* --- Quote Block --- */
+    .quote-block {
+      padding: 1.5rem 2rem;
+      border-left: 3px solid var(--sand);
+      background: var(--gray-50);
+      border-radius: 0 10px 10px 0;
+      margin: 2rem 0;
+      font-size: 0.9rem;
+      line-height: 1.7;
+      color: var(--gray-600);
+    }
+    .quote-block strong {
+      color: var(--teal);
+    }
+
+    /* --- Footer Tag --- */
+    .slide-footer {
+      position: absolute;
+      bottom: 2.5rem;
+      left: 6rem;
+      font-size: 0.8rem;
+      font-style: italic;
+      color: var(--gray-400);
+    }
+    .slide--dark .slide-footer {
+      color: rgba(255,255,255,0.35);
+    }
+
+    /* --- Contact Block --- */
+    .contact-block {
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(255,255,255,0.15);
+    }
+    .contact-block p {
+      font-size: 0.875rem;
+      line-height: 1.8;
+      color: rgba(255,255,255,0.6);
+    }
+    .contact-block strong {
+      color: var(--white);
+      font-weight: 600;
+    }
+    .contact-block a {
+      color: var(--sand);
+      text-decoration: none;
+    }
+
+    /* --- Footnote --- */
+    .footnote {
+      margin-top: 1.5rem;
+      font-size: 0.775rem;
+      color: var(--gray-400);
+      line-height: 1.6;
+    }
+
+    /* --- Scroll Animations --- */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+    .reveal-delay-4 { transition-delay: 0.4s; }
+
+    /* --- City Slide Image Header --- */
+    .city-hero {
+      width: 100%;
+      height: 35vh;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+      padding: 2rem 6rem;
+    }
+    .city-hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(14,58,45,0.85) 0%, rgba(14,58,45,0.2) 60%, transparent 100%);
+    }
+    .city-hero-content {
+      position: relative;
+      z-index: 1;
+      color: var(--white);
+    }
+    .city-hero-content h2 {
+      font-size: 2.25rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+    .city-hero-content p {
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.7);
+      margin-top: 0.25rem;
+    }
+    .city-body {
+      padding: 2.5rem 6rem 4rem;
+      flex: 1;
+    }
+    .slide--city {
+      padding: 0;
+    }
+    .city-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-top: 1.5rem;
+    }
+    .city-section h3 {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--sand);
+      margin-bottom: 0.75rem;
+    }
+    .city-section ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .city-section li {
+      font-size: 0.85rem;
+      line-height: 1.6;
+      color: var(--gray-600);
+      padding-left: 0.875rem;
+      position: relative;
+    }
+    .city-section li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.5rem;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: var(--sand);
+    }
+    .city-example {
+      margin-top: 1.5rem;
+      padding: 1rem 1.25rem;
+      background: var(--gray-50);
+      border-radius: 10px;
+      border: 1px solid var(--gray-100);
+    }
+    .city-example h4 {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gray-400);
+      margin-bottom: 0.375rem;
+    }
+    .city-example p {
+      font-size: 0.825rem;
+      line-height: 1.6;
+      color: var(--gray-600);
+    }
+    .city-take {
+      margin-top: 1.5rem;
+      padding: 1rem 1.25rem;
+      border-left: 3px solid var(--sand);
+      font-size: 0.85rem;
+      line-height: 1.7;
+      color: var(--teal);
+      font-weight: 500;
+    }
+    .city-cost {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      background: var(--teal);
+      color: var(--white);
+      border-radius: 6px;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+
+    /* --- Hotel Photo Grid --- */
+    .hotel-photos {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.5rem;
+      margin-top: 0.75rem;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .hotel-photos img {
+      width: 100%;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 4px;
+    }
+    .hotel-photos img:first-child {
+      grid-column: 1 / -1;
+      height: 160px;
+    }
+
+    /* --- Suggested Badge --- */
+    .suggested-badge {
+      display: inline-block;
+      background: var(--coral);
+      color: var(--white);
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.75rem;
+      border-radius: 4px;
+      margin-left: 0.75rem;
+      vertical-align: middle;
+    }
+
+    /* --- Responsive --- */
+    @media (max-width: 1024px) {
+      .slide { padding: 3rem 3rem; }
+      .slide-title { font-size: 2rem; }
+      .cover-title { font-size: 2.5rem; }
+      .mgmt-grid { grid-template-columns: 1fr; }
+      .city-grid { grid-template-columns: 1fr; }
+      .city-hero { padding: 2rem 3rem; }
+      .city-body { padding: 2rem 3rem 3rem; }
+      .slide-footer { left: 3rem; }
+      .slide--split { flex-direction: column; }
+      .split-image { width: 100%; height: 30vh; }
+      .split-content { width: 100%; padding: 2.5rem 3rem; }
+      #nav-dots { display: none; }
+    }
+    @media (max-width: 640px) {
+      .slide { padding: 2rem 1.5rem; }
+      .slide-title { font-size: 1.75rem; }
+      .cover-title { font-size: 2rem; }
+      .city-hero { padding: 1.5rem; }
+      .city-body { padding: 1.5rem 1.5rem 2.5rem; }
+      .comparison-table { font-size: 0.75rem; }
+      .slide-footer { left: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="progress"></div>
+
+  <nav id="nav-dots" aria-label="Slide navigation"></nav>
+
+  <!-- ============ SLIDE 1: COVER ============ -->
+  <section class="slide slide--cover" data-slide="0">
+    <div class="cover-content">
+      <img src="assets/salty-wordmark-white.png" alt="SALTY Retreats" class="cover-logo reveal">
+      <p class="cover-collab reveal reveal-delay-1">A Proposal By</p>
+      <h1 class="cover-title reveal reveal-delay-2">Bridge for Billions<br>Team Retreat</h1>
+      <p class="cover-subtitle reveal reveal-delay-3">Morocco &mdash; July 2026</p>
+      <p class="cover-meta reveal reveal-delay-4">Prepared for the Bridge for Billions team</p>
+    </div>
+  </section>
+
+  <!-- ============ SLIDE 2: WHO WE ARE ============ -->
+  <section class="slide slide--split slide--white" data-slide="1">
+    <div class="split-image" style="background-image: url('assets/salty-team.jpg')"></div>
+    <div class="split-content">
+      <p class="slide-label reveal">About SALTY Retreats</p>
+      <h2 class="slide-title reveal reveal-delay-1">Your retreat,<br>handled end to end.</h2>
+      <p class="slide-subtitle reveal reveal-delay-2">SALTY Retreats specializes in international group experiences. We handle venue negotiation, vendor coordination, guest logistics, and itinerary design &mdash; so your leadership team can focus on the work that matters.</p>
+      <ul class="bullet-list reveal reveal-delay-3">
+        <li><span class="bullet-icon"></span><span>In partnership with <strong>Nexion Canada</strong> (part of Internova/Travel Leaders Group)</span></li>
+        <li><span class="bullet-icon"></span><span>Retreats hosted across <strong>8 countries</strong></span></li>
+        <li><span class="bullet-icon"></span><span>Venue negotiation, supplier management, and group logistics across <strong>3 continents</strong></span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ SLIDE 3: WE HEARD YOU ============ -->
+  <section class="slide slide--cream" data-slide="2">
+    <p class="slide-label reveal">Discovery Summary</p>
+    <h2 class="slide-title reveal reveal-delay-1">What we understand<br>about your retreat</h2>
+    <div style="max-width: 720px; margin-top: 1rem;">
+      <ul class="bullet-list reveal reveal-delay-3">
+        <li><span class="bullet-icon"></span><span>Your team of <strong>~50</strong> is distributed across Europe, Latin America, and East Africa</span></li>
+        <li><span class="bullet-icon"></span><span>This is an <strong>annual tradition</strong> that matters to your culture</span></li>
+        <li><span class="bullet-icon"></span><span>You need <strong>2 full workshop days</strong> plus arrival and departure days</span></li>
+        <li><span class="bullet-icon"></span><span>Meeting rooms and breakout spaces for <strong>intensive planning sessions</strong></span></li>
+        <li><span class="bullet-icon"></span><span><strong>Vegetarian and vegan catering</strong> as standard, with full dietary accommodation</span></li>
+        <li><span class="bullet-icon"></span><span>Airport transfers coordinated around your team's <strong>diverse flight schedules</strong></span></li>
+        <li><span class="bullet-icon"></span><span>Targeting your benchmark of under <strong>&euro;300 per person per night</strong>, all-inclusive</span></li>
+      </ul>
+    </div>
+    <p class="slide-footer">This document is built based on these requirements.</p>
+  </section>
+
+  <!-- ============ SLIDE 4: OUR PROCESS ============ -->
+  <section class="slide slide--white" data-slide="3">
+    <p class="slide-label reveal">Our Approach</p>
+    <h2 class="slide-title reveal reveal-delay-1">How we work</h2>
+    <div style="max-width: 640px; margin-top: 1.5rem;">
+      <div class="process-steps reveal reveal-delay-2">
+        <div class="process-step">
+          <div class="step-number done">1</div>
+          <div class="step-content">
+            <h3>Discovery <span class="step-badge step-badge--done">Complete</span></h3>
+            <p>Understand your team, goals, and constraints</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-number active">2</div>
+          <div class="step-content">
+            <h3>Research &amp; Proposal <span class="step-badge step-badge--current">We are here</span></h3>
+            <p>Source and vet properties, build transparent pricing, present options</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-number">3</div>
+          <div class="step-content">
+            <h3>Letter of Engagement &amp; Venue Negotiations</h3>
+            <p>Lock in the partnership, negotiate final rates and hold dates</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-number">4</div>
+          <div class="step-content">
+            <h3>Contracting &amp; Deposits</h3>
+            <p>Finalize vendor agreements, secure rooms and meeting space with deposits</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-number">5</div>
+          <div class="step-content">
+            <h3>Planning &amp; Execution</h3>
+            <p>Guest registration, dietary surveys, transfer coordination, meal planning, run-of-show, and full vendor management through to completion</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="slide-footer">Your team focuses on content and connection. We handle everything around it.</p>
+  </section>
+
+  <!-- ============ SLIDE 5: WHY MOROCCO ============ -->
+  <section class="slide slide--split slide--dark" data-slide="4">
+    <div class="split-image" style="background-image: url('assets/morocco-culture.jpg')">
+      <style>.slide--dark .split-image::after { background: linear-gradient(90deg, transparent 60%, var(--teal) 100%); }</style>
+    </div>
+    <div class="split-content">
+      <p class="slide-label reveal">Destination</p>
+      <h2 class="slide-title reveal reveal-delay-1" style="color: var(--white)">Why Morocco works<br>for your team</h2>
+      <ul class="bullet-list reveal reveal-delay-2">
+        <li><span class="bullet-icon"></span><span><strong>Accessible from 3 continents</strong> &mdash; Direct flights from Madrid, Paris, London, Amsterdam, and Nairobi via Casablanca. Short connections from Latin America through European hubs.</span></li>
+        <li><span class="bullet-icon"></span><span><strong>Exceptional value</strong> &mdash; Luxury-tier venues and catering at a fraction of Western European pricing.</span></li>
+        <li><span class="bullet-icon"></span><span><strong>Rich cultural backdrop</strong> &mdash; Moroccan architecture, cuisine, and coastline create a memorable setting that elevates a working trip into a shared experience.</span></li>
+        <li><span class="bullet-icon"></span><span><strong>Strong corporate infrastructure</strong> &mdash; Morocco's top hotels have experienced events teams accustomed to groups of 50+.</span></li>
+        <li><span class="bullet-icon"></span><span><strong>Visa-friendly</strong> &mdash; No visa required for EU, US, Canadian, and Kenyan passport holders.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ SLIDE 6: CASABLANCA (Option A) ============ -->
+  <section class="slide slide--city slide--white" data-slide="5">
+    <div class="city-hero" style="background-image: url('assets/casablanca-city.jpg')">
+      <div class="city-hero-content">
+        <p class="slide-label" style="color: var(--sand)">Option A <span class="suggested-badge">SALTY's Suggested Destination</span></p>
+        <h2>Casablanca</h2>
+        <p>Connected and cosmopolitan &middot; Morocco's international hub &middot; Urban energy</p>
+      </div>
+    </div>
+    <div class="city-body">
+      <div class="city-grid reveal">
+        <div class="city-section">
+          <h3>Why Casablanca</h3>
+          <ul>
+            <li>Home to Mohammed V International (CMN) &mdash; Morocco's largest and best-connected airport with direct flights from Madrid, Paris, London, Nairobi, and dozens more</li>
+            <li>For a team flying from three continents, this is the simplest logistics &mdash; fewer connections, fewer delays, fewer missed arrivals</li>
+            <li>Morocco's commercial capital with cosmopolitan energy &mdash; restaurants, culture, and nightlife for free evenings</li>
+            <li>Shorter transfer times from airport to hotel (30&ndash;45 minutes)</li>
+          </ul>
+        </div>
+        <div class="city-section">
+          <h3>Flight Access</h3>
+          <ul>
+            <li>Mohammed V International (CMN) &mdash; direct from Madrid, Paris, London, Amsterdam, Nairobi + extensive global connections</li>
+            <li>Best option for minimizing layovers and travel complexity across your entire team</li>
+          </ul>
+          <div class="city-example" style="margin-top: 1.25rem;">
+            <h4>Example Property We're Evaluating</h4>
+            <p><strong>Villa Sahrai</strong> &mdash; Boutique design hotel, 56 rooms, 100m from the ocean. Intimate atmosphere with strong concierge service. Meeting space is functional though not purpose-built for groups of 50.</p>
+            <div class="hotel-photos">
+              <img src="assets/villa sahrai exterior.jpg" alt="Villa Sahrai — exterior facade">
+              <img src="assets/villasahrai interior.jpg" alt="Villa Sahrai — suite interior">
+              <img src="assets/villasahrai new.jpeg" alt="Villa Sahrai — property">
+            </div>
+          </div>
+          <div class="city-example" style="margin-top: 0.75rem; border-color: var(--sand);">
+            <h4>Additional Properties Being Sourced</h4>
+            <p>We are finalizing quotes from several additional Casablanca properties with stronger dedicated meeting infrastructure and capacity for your full group.</p>
+          </div>
+        </div>
+      </div>
+      <div class="city-take reveal reveal-delay-1">Casablanca is the strongest choice for flight logistics &mdash; and for a distributed team across three continents, that matters. We're confident in the venue options being sourced.</div>
+      <div class="city-cost reveal reveal-delay-2">Estimated ground cost: &euro;38,000&ndash;45,500</div>
+    </div>
+  </section>
+
+  <!-- ============ SLIDE 7: AGADIR (Option B) ============ -->
+  <section class="slide slide--city slide--white" data-slide="6">
+    <div class="city-hero" style="background-image: url('assets/agadir-coast.jpg')">
+      <div class="city-hero-content">
+        <p class="slide-label" style="color: var(--sand)">Option B</p>
+        <h2>Agadir</h2>
+        <p>Coastal retreat setting &middot; Atlantic coastline &middot; Resort infrastructure</p>
+      </div>
+    </div>
+    <div class="city-body">
+      <div class="city-grid reveal">
+        <div class="city-section">
+          <h3>Why Agadir</h3>
+          <ul>
+            <li>Purpose-built resort town on Morocco's southern Atlantic coast &mdash; designed for exactly this kind of experience</li>
+            <li>Hotels with dedicated conference infrastructure: multiple meeting rooms, AV packages, breakout spaces, and Day Delegate rates</li>
+            <li>Beach access and resort amenities give your team natural decompression between workshop days</li>
+            <li>A distinctly different environment from daily routines &mdash; the change of setting is part of the value</li>
+          </ul>
+        </div>
+        <div class="city-section">
+          <h3>Flight Access</h3>
+          <ul>
+            <li>Agadir Al Massira Airport (AGA) &mdash; direct flights from Paris, London, Amsterdam, Brussels</li>
+            <li>Madrid connections available, though most require 1 stop</li>
+            <li>Fewer direct routes than Casablanca &mdash; this is the primary reason we suggest Casablanca for a team distributed across three continents</li>
+          </ul>
+          <div class="city-example" style="margin-top: 1.25rem;">
+            <h4>Example Property We're Evaluating</h4>
+            <p><strong>Sofitel Agadir Royal Bay Resort</strong> &mdash; 5-star, 273 rooms, 6 meeting rooms, Day Delegate package available, airport shuttle included. Strong fit for a workshop-intensive format with 50 people.</p>
+            <div class="hotel-photos">
+              <img src="assets/sofitel exterior 2.jpg" alt="Sofitel Agadir Royal Bay Resort — pool and ocean view">
+              <img src="assets/sofitel agadir interior.jpg" alt="Sofitel Agadir — guest room">
+              <img src="assets/sofitel agadir.webp" alt="Sofitel Agadir — property">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="city-take reveal reveal-delay-1">Agadir offers the strongest retreat atmosphere and the most predictable meeting infrastructure. The tradeoff is flight logistics &mdash; your Nairobi and Latin American team members will likely need at least one connection.</div>
+      <div class="city-cost reveal reveal-delay-2">Estimated ground cost: &euro;42,000&ndash;46,000</div>
+    </div>
+  </section>
+
+  <!-- ============ SLIDE 8: COMPARISON ============ -->
+  <section class="slide slide--cream" data-slide="7" style="padding-top: 3rem; padding-bottom: 3rem;">
+    <p class="slide-label reveal">Comparison</p>
+    <h2 class="slide-title reveal reveal-delay-1">Agadir vs Casablanca</h2>
+    <div style="margin-top: 2rem; overflow-x: auto;" class="reveal reveal-delay-2">
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th style="width: 28%;">Factor</th>
+            <th style="width: 36%;" class="table-highlight">Casablanca (Option A)</th>
+            <th style="width: 36%;">Agadir (Option B)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Airport Connectivity</td>
+            <td class="table-highlight"><span class="table-star">&#9733;</span> Best (CMN) &mdash; direct from Madrid, Nairobi, Paris, London, Amsterdam + global connections</td>
+            <td>Good (AGA) &mdash; direct from Paris, London, Amsterdam. Connections needed from Madrid, Nairobi, Latin America</td>
+          </tr>
+          <tr>
+            <td>Meeting Infrastructure</td>
+            <td class="table-highlight">Varies by property &mdash; ranges from boutique to full-scale conference hotels</td>
+            <td>Strong &mdash; purpose-built conference hotels with dedicated packages and breakout rooms</td>
+          </tr>
+          <tr>
+            <td>Atmosphere</td>
+            <td class="table-highlight">Urban cosmopolitan &mdash; restaurants, culture, nightlife on free evenings</td>
+            <td>Coastal resort &mdash; beach, pool, natural downtime between sessions</td>
+          </tr>
+          <tr>
+            <td>Venue Options</td>
+            <td class="table-highlight">Wider range of properties being sourced, from boutique to business-class</td>
+            <td>Established resort infrastructure with reliable group capacity</td>
+          </tr>
+          <tr>
+            <td>Ground Cost Range</td>
+            <td class="table-highlight">&euro;38,000&ndash;45,500</td>
+            <td>&euro;42,000&ndash;46,000</td>
+          </tr>
+          <tr>
+            <td>Best For</td>
+            <td class="table-highlight"><strong>Simplified flight logistics for a 3-continent team</strong></td>
+            <td>Predictable infrastructure, retreat atmosphere</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="quote-block reveal reveal-delay-3">
+      For a distributed team flying from Madrid, Nairobi, Guatemala City, and beyond &mdash; Casablanca's airport connectivity is a significant practical advantage. We are actively sourcing Casablanca properties that pair this accessibility with strong meeting infrastructure, and will present these alongside this proposal as they're confirmed.
+    </div>
+  </section>
+
+  <!-- ============ SLIDE 9: MANAGEMENT ============ -->
+  <section class="slide slide--white" data-slide="8">
+    <p class="slide-label reveal">What's Included</p>
+    <h2 class="slide-title reveal reveal-delay-1">What we handle</h2>
+    <div class="mgmt-grid reveal reveal-delay-2" style="margin-top: 2rem;">
+      <div class="mgmt-item">
+        <h3>Itinerary Curation</h3>
+        <p>We design your full 4-day schedule around your workshop agenda, building in structured group meals, free time, arrival logistics, and optional experiences.</p>
+      </div>
+      <div class="mgmt-item">
+        <h3>Guest Registration</h3>
+        <p>Detailed registration form sent 6 weeks before arrival &mdash; collecting dietary needs, accessibility requirements, flight details, and room preferences.</p>
+      </div>
+      <div class="mgmt-item">
+        <h3>Dietary Management</h3>
+        <p>Full dietary survey compiled and shared with venue catering. Vegan, vegetarian, halal, kosher, and allergy-specific accommodations confirmed in advance.</p>
+      </div>
+      <div class="mgmt-item">
+        <h3>Transfer Coordination</h3>
+        <p>We map all arrival and departure flights and organize airport transfers in time-batched groups, so no one is left waiting.</p>
+      </div>
+      <div class="mgmt-item">
+        <h3>Meal Planning</h3>
+        <p>A structured meal plan balancing group meals with free evenings. Local restaurant recommendations provided for nights off.</p>
+      </div>
+      <div class="mgmt-item">
+        <h3>Vendor Coordination</h3>
+        <p>All supplier communication, scheduling, and room setup managed by our team so your leadership can participate, not coordinate.</p>
+      </div>
+      <div class="mgmt-item" style="grid-column: 1 / -1;">
+        <h3>Communication</h3>
+        <p>Real-time coordination throughout the retreat. Detailed run-of-show shared in advance. Daily schedule confirmed each evening for the following day.</p>
+      </div>
+    </div>
+    <p class="slide-footer">You design the workshops. We design everything around them.</p>
+  </section>
+
+  <!-- ============ SLIDE 10: SCHEDULE ============ -->
+  <section class="slide slide--cream" data-slide="9" style="padding-top: 3rem; padding-bottom: 3rem;">
+    <p class="slide-label reveal">Sample Itinerary</p>
+    <h2 class="slide-title reveal reveal-delay-1">4-Day Framework</h2>
+    <div style="margin-top: 2rem; overflow-x: auto;" class="reveal reveal-delay-2">
+      <table class="schedule-table">
+        <thead>
+          <tr>
+            <th>Time</th>
+            <th>Day 1 &mdash; Tue, Jul 7</th>
+            <th>Day 2 &mdash; Wed, Jul 8</th>
+            <th>Day 3 &mdash; Thu, Jul 9</th>
+            <th>Day 4 &mdash; Fri, Jul 10</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Morning</td>
+            <td>Arrivals + check-in</td>
+            <td><span class="schedule-optional">Optional fitness/yoga</span><br>Breakfast &rarr; Workshop Block 1</td>
+            <td><span class="schedule-optional">Optional fitness/yoga</span><br>Breakfast &rarr; Workshop Block 1</td>
+            <td>Breakfast &rarr; Final Session</td>
+          </tr>
+          <tr>
+            <td>Mid-Morning</td>
+            <td>&mdash;</td>
+            <td>Coffee break</td>
+            <td>Coffee break</td>
+            <td>Coffee break</td>
+          </tr>
+          <tr>
+            <td>Late Morning</td>
+            <td>&mdash;</td>
+            <td>Workshop Block 2</td>
+            <td>Workshop Block 2</td>
+            <td>Wrap-up + reflections</td>
+          </tr>
+          <tr>
+            <td>Lunch</td>
+            <td>Welcome lunch <span class="schedule-star">GROUP</span></td>
+            <td>Working lunch (catered)</td>
+            <td>Working lunch (catered)</td>
+            <td>Farewell lunch <span class="schedule-star">GROUP</span></td>
+          </tr>
+          <tr>
+            <td>Afternoon</td>
+            <td>Orientation + Opening session</td>
+            <td>Workshop Block 3 + breakouts</td>
+            <td>Free afternoon</td>
+            <td>Check-out + departures</td>
+          </tr>
+          <tr>
+            <td>Evening</td>
+            <td>Welcome dinner <span class="schedule-star">GROUP</span></td>
+            <td><span class="schedule-optional">Free evening w/ restaurant recs + optional add-on experiences</span></td>
+            <td>Farewell dinner <span class="schedule-star">GROUP</span></td>
+            <td>&mdash;</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="footnote reveal reveal-delay-3">This is a framework. The final agenda is designed in collaboration with your team based on workshop content and goals.</p>
+  </section>
+
+  <!-- ============ SLIDE 11: INVESTMENT ============ -->
+  <section class="slide slide--white" data-slide="10" style="padding-top: 3rem; padding-bottom: 3rem;">
+    <p class="slide-label reveal">Pricing</p>
+    <h2 class="slide-title reveal reveal-delay-1">Investment Overview</h2>
+    <div style="margin-top: 2rem; overflow-x: auto;" class="reveal reveal-delay-2">
+      <table class="investment-table">
+        <thead>
+          <tr>
+            <th>Component</th>
+            <th>Casablanca (est.)</th>
+            <th>Agadir (est.)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Accommodation (3 nights, breakfast incl.)</td>
+            <td>&euro;17,500&ndash;18,000</td>
+            <td>&euro;20,000&ndash;20,500</td>
+          </tr>
+          <tr>
+            <td>Meeting Space + AV + Coffee Breaks</td>
+            <td>&euro;3,600&ndash;6,000</td>
+            <td>&euro;9,800&ndash;10,000</td>
+          </tr>
+          <tr>
+            <td>Airport Transfers</td>
+            <td>&euro;1,350&ndash;2,000</td>
+            <td>&euro;1,350&ndash;2,000</td>
+          </tr>
+          <tr>
+            <td>Group Meals</td>
+            <td>&euro;12,000&ndash;16,000</td>
+            <td>&euro;7,000&ndash;10,000</td>
+          </tr>
+          <tr class="included-row">
+            <td>Retreat Coordination + Logistics</td>
+            <td>&euro;3,500</td>
+            <td>&euro;3,500</td>
+          </tr>
+          <tr class="total-row">
+            <td>Estimated Total (excl. flights)</td>
+            <td>&euro;38,000&ndash;45,500</td>
+            <td>&euro;41,650&ndash;46,000</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="footnote reveal reveal-delay-3">Includes welcome lunch, farewell lunch, welcome dinner, and farewell dinner for 50 guests. Venues with Day Delegate packages bundle working lunches and coffee breaks into the meeting space line. Venues without require separate catering, reflected in the higher meals estimate.</p>
+    <div class="quote-block reveal reveal-delay-3" style="margin-top: 1.5rem;">
+      <strong>Flights:</strong> We will provide your team with optimized flight suggestions for every departure city at no additional charge &mdash; including recommended airlines, routing, and timing to coordinate group arrivals. We recommend your team book directly with staff, which gives each person flexibility to work within their travel preferences and your internal budget. For teams that prefer fully managed booking, we offer a complete flight coordination service at &euro;150 per person.<br><br><em style="font-size: 0.8rem; color: var(--gray-400);">Note: Flight costs will vary significantly based on the number of guests travelling from each departure city (Madrid, Nairobi, Guatemala City, etc.) and booking timing.</em>
+    </div>
+    <p class="footnote reveal reveal-delay-4" style="font-style: italic;">Final pricing confirmed upon venue selection. Additional Casablanca-area properties currently being evaluated may offer adjusted pricing.</p>
+  </section>
+
+  <!-- ============ SLIDE 12: NEXT STEPS ============ -->
+  <section class="slide slide--dark" data-slide="11">
+    <p class="slide-label reveal">Let's Move Forward</p>
+    <h2 class="slide-title reveal reveal-delay-1" style="color: var(--white); margin-bottom: 2rem;">Next Steps</h2>
+    <div class="next-steps reveal reveal-delay-2" style="max-width: 640px;">
+      <div class="next-step">
+        <div class="next-step-num ns-1">1</div>
+        <div class="next-step-content">
+          <h3 style="color: var(--white)">Confirm your preferred destination</h3>
+          <p style="color: rgba(255,255,255,0.6)">We recommend Casablanca for best flight logistics, or Agadir for strongest meeting infrastructure. We can also present additional Casablanca properties as they are confirmed.</p>
+        </div>
+      </div>
+      <div class="next-step">
+        <div class="next-step-num ns-2">2</div>
+        <div class="next-step-content">
+          <h3 style="color: var(--white)">Sign letter of engagement</h3>
+          <p style="color: rgba(255,255,255,0.6)">Locks in the partnership, allows us to begin venue negotiations and secure a room block hold. We will provide this within 48 hours of your confirmation.</p>
+        </div>
+      </div>
+      <div class="next-step">
+        <div class="next-step-num ns-3">3</div>
+        <div class="next-step-content">
+          <h3 style="color: var(--white)">Confirm remaining details</h3>
+          <p style="color: rgba(255,255,255,0.6)">Final room count (doubles vs. singles for leadership), any specific dietary or accessibility requirements, and whether you would like us to coordinate flights.</p>
+        </div>
+      </div>
+      <div class="next-step">
+        <div class="next-step-num ns-4">4</div>
+        <div class="next-step-content">
+          <h3 style="color: var(--white)">Finalize pricing &amp; contracting</h3>
+          <p style="color: rgba(255,255,255,0.6)">Once the venue is confirmed and details are locked, we deliver a final all-inclusive price and formalize vendor agreements. Deposits are placed, rooms are held, and your July dates are secured.</p>
+        </div>
+      </div>
+    </div>
+    <div class="urgency-banner reveal reveal-delay-3" style="max-width: 640px; background: rgba(212,165,116,0.1); border-color: rgba(212,165,116,0.25); color: rgba(255,255,255,0.8);">
+      Hotel room inventory for July dates is actively selling. Signing the engagement letter allows us to begin venue negotiations and secure a room block hold before availability narrows.
+    </div>
+    <div class="contact-block reveal reveal-delay-4">
+      <p>
+        <strong>Nate Behar</strong>, Co-Founder<br>
+        SALTY Retreats<br>
+        <a href="mailto:hello@getsaltyretreats.com">hello@getsaltyretreats.com</a>
+      </p>
+    </div>
+    <img src="assets/salty-wordmark-white.png" alt="SALTY Retreats" style="position: absolute; bottom: 2.5rem; right: 6rem; width: 100px; opacity: 0.4;">
+  </section>
+
+  <script>
+    // --- Scroll Progress ---
+    const progress = document.getElementById('progress');
+    const slides = document.querySelectorAll('.slide');
+    const navDots = document.getElementById('nav-dots');
+
+    // Create nav dots
+    slides.forEach((_, i) => {
+      const dot = document.createElement('button');
+      dot.className = 'nav-dot';
+      dot.setAttribute('aria-label', `Go to slide ${i + 1}`);
+      dot.addEventListener('click', () => {
+        slides[i].scrollIntoView({ behavior: 'smooth' });
+      });
+      navDots.appendChild(dot);
+    });
+    const dots = document.querySelectorAll('.nav-dot');
+
+    // --- Intersection Observer for animations ---
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // --- Scroll tracking ---
+    let currentSlide = 0;
+    const slideObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const idx = parseInt(entry.target.dataset.slide);
+          currentSlide = idx;
+          updateNav(idx);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    slides.forEach(s => slideObserver.observe(s));
+
+    function updateNav(idx) {
+      const pct = ((idx + 1) / slides.length) * 100;
+      progress.style.width = pct + '%';
+      dots.forEach((d, i) => {
+        d.classList.toggle('active', i === idx);
+        // Check if current slide is dark
+        const slide = slides[idx];
+        const isDark = slide.classList.contains('slide--dark') || slide.classList.contains('slide--navy') || slide.classList.contains('slide--cover');
+        d.classList.toggle('on-dark', isDark);
+      });
+    }
+
+    // --- Keyboard navigation ---
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowDown' || e.key === 'ArrowRight') {
+        e.preventDefault();
+        const next = Math.min(currentSlide + 1, slides.length - 1);
+        slides[next].scrollIntoView({ behavior: 'smooth' });
+      }
+      if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') {
+        e.preventDefault();
+        const prev = Math.max(currentSlide - 1, 0);
+        slides[prev].scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+
+    // Init
+    updateNav(0);
+  </script>
+</body>
+</html>

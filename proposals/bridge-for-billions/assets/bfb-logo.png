@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+		<meta name='robots' content='noindex, follow' />
+	<style>img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px }</style>
+	    <!-- Start VWO Common Smartcode -->
+    <script  type='text/javascript'>
+        var _vwo_clicks = 10;
+    </script>
+    <!-- End VWO Common Smartcode -->
+        <!-- Start VWO Async SmartCode -->
+    <link rel="preconnect" href="https://dev.visualwebsiteoptimizer.com" />
+    <script  type='text/javascript' id='vwoCode'>
+        /* Fix: wp-rocket (application/ld+json) */
+        window._vwo_code || (function () {
+            var w=window,
+            d=document;
+            var account_id=951821,
+            version=2.2,
+            settings_tolerance=2000,
+            library_tolerance=2500,
+            use_existing_jquery=false,
+            platform='web',
+            hide_element='body',
+            hide_element_style='opacity:0 !important;filter:alpha(opacity=0) !important;background:none !important';
+            /* DO NOT EDIT BELOW THIS LINE */
+            if(f=!1,v=d.querySelector('#vwoCode'),cc={},-1<d.URL.indexOf('__vwo_disable__')||w._vwo_code)return;try{var e=JSON.parse(localStorage.getItem('_vwo_'+account_id+'_config'));cc=e&&'object'==typeof e?e:{}}catch(e){}function r(t){try{return decodeURIComponent(t)}catch(e){return t}}var s=function(){var e={combination:[],combinationChoose:[],split:[],exclude:[],uuid:null,consent:null,optOut:null},t=d.cookie||'';if(!t)return e;for(var n,i,o=/(?:^|;\s*)(?:(_vis_opt_exp_(\d+)_combi=([^;]*))|(_vis_opt_exp_(\d+)_combi_choose=([^;]*))|(_vis_opt_exp_(\d+)_split=([^:;]*))|(_vis_opt_exp_(\d+)_exclude=[^;]*)|(_vis_opt_out=([^;]*))|(_vwo_global_opt_out=[^;]*)|(_vwo_uuid=([^;]*))|(_vwo_consent=([^;]*)))/g;null!==(n=o.exec(t));)try{n[1]?e.combination.push({id:n[2],value:r(n[3])}):n[4]?e.combinationChoose.push({id:n[5],value:r(n[6])}):n[7]?e.split.push({id:n[8],value:r(n[9])}):n[10]?e.exclude.push({id:n[11]}):n[12]?e.optOut=r(n[13]):n[14]?e.optOut=!0:n[15]?e.uuid=r(n[16]):n[17]&&(i=r(n[18]),e.consent=i&&3<=i.length?i.substring(0,3):null)}catch(e){}return e}();function i(){var e=function(){if(w.VWO&&Array.isArray(w.VWO))for(var e=0;e<w.VWO.length;e++){var t=w.VWO[e];if(Array.isArray(t)&&('setVisitorId'===t[0]||'setSessionId'===t[0]))return!0}return!1}(),t='a='+account_id+'&u='+encodeURIComponent(w._vis_opt_url||d.URL)+'&vn='+version+'&ph=1'+('undefined'!=typeof platform?'&p='+platform:'')+'&st='+w.performance.now();e||((n=function(){var e,t=[],n={},i=w.VWO&&w.VWO.appliedCampaigns||{};for(e in i){var o=i[e]&&i[e].v;o&&(t.push(e+'-'+o+'-1'),n[e]=!0)}if(s&&s.combination)for(var r=0;r<s.combination.length;r++){var a=s.combination[r];n[a.id]||t.push(a.id+'-'+a.value)}return t.join('|')}())&&(t+='&c='+n),(n=function(){var e=[],t={};if(s&&s.combinationChoose)for(var n=0;n<s.combinationChoose.length;n++){var i=s.combinationChoose[n];e.push(i.id+'-'+i.value),t[i.id]=!0}if(s&&s.split)for(var o=0;o<s.split.length;o++)t[(i=s.split[o]).id]||e.push(i.id+'-'+i.value);return e.join('|')}())&&(t+='&cc='+n),(n=function(){var e={},t=[];if(w.VWO&&Array.isArray(w.VWO))for(var n=0;n<w.VWO.length;n++){var i=w.VWO[n];if(Array.isArray(i)&&'setVariation'===i[0]&&i[1]&&Array.isArray(i[1]))for(var o=0;o<i[1].length;o++){var r,a=i[1][o];a&&'object'==typeof a&&(r=a.e,a=a.v,r&&a&&(e[r]=a))}}for(r in e)t.push(r+'-'+e[r]);return t.join('|')}())&&(t+='&sv='+n)),s&&s.optOut&&(t+='&o='+s.optOut);var n=function(){var e=[],t={};if(s&&s.exclude)for(var n=0;n<s.exclude.length;n++){var i=s.exclude[n];t[i.id]||(e.push(i.id),t[i.id]=!0)}return e.join('|')}();return n&&(t+='&e='+n),s&&s.uuid&&(t+='&id='+s.uuid),s&&s.consent&&(t+='&consent='+s.consent),w.name&&-1<w.name.indexOf('_vis_preview')&&(t+='&pM=true'),w.VWO&&w.VWO.ed&&(t+='&ed='+w.VWO.ed),t}code={nonce:v&&v.nonce,use_existing_jquery:function(){return'undefined'!=typeof use_existing_jquery?use_existing_jquery:void 0},library_tolerance:function(){return'undefined'!=typeof library_tolerance?library_tolerance:void 0},settings_tolerance:function(){return cc.sT||settings_tolerance},hide_element_style:function(){return'{'+(cc.hES||hide_element_style)+'}'},hide_element:function(){return performance.getEntriesByName('first-contentful-paint')[0]?'':'string'==typeof cc.hE?cc.hE:hide_element},getVersion:function(){return version},finish:function(e){var t;f||(f=!0,(t=d.getElementById('_vis_opt_path_hides'))&&t.parentNode.removeChild(t),e&&((new Image).src='https://dev.visualwebsiteoptimizer.com/ee.gif?a='+account_id+e))},finished:function(){return f},addScript:function(e){var t=d.createElement('script');t.type='text/javascript',e.src?t.src=e.src:t.text=e.text,v&&t.setAttribute('nonce',v.nonce),d.getElementsByTagName('head')[0].appendChild(t)},load:function(e,t){t=t||{};var n=new XMLHttpRequest;n.open('GET',e,!0),n.withCredentials=!t.dSC,n.responseType=t.responseType||'text',n.onload=function(){if(t.onloadCb)return t.onloadCb(n,e);200===n.status?_vwo_code.addScript({text:n.responseText}):_vwo_code.finish('&e=loading_failure:'+e)},n.onerror=function(){if(t.onerrorCb)return t.onerrorCb(e);_vwo_code.finish('&e=loading_failure:'+e)},n.send()},init:function(){var e,t=this.settings_tolerance();w._vwo_settings_timer=setTimeout(function(){_vwo_code.finish()},t),'body'!==this.hide_element()?(n=d.createElement('style'),e=(t=this.hide_element())?t+this.hide_element_style():'',t=d.getElementsByTagName('head')[0],n.setAttribute('id','_vis_opt_path_hides'),v&&n.setAttribute('nonce',v.nonce),n.setAttribute('type','text/css'),n.styleSheet?n.styleSheet.cssText=e:n.appendChild(d.createTextNode(e)),t.appendChild(n)):(n=d.getElementsByTagName('head')[0],(e=d.createElement('div')).style.cssText='z-index: 2147483647 !important;position: fixed !important;left: 0 !important;top: 0 !important;width: 100% !important;height: 100% !important;background: white !important;',e.setAttribute('id','_vis_opt_path_hides'),e.classList.add('_vis_hide_layer'),n.parentNode.insertBefore(e,n.nextSibling));var n='https://dev.visualwebsiteoptimizer.com/j.php?'+i();-1!==w.location.search.indexOf('_vwo_xhr')?this.addScript({src:n}):this.load(n+'&x=true',{l:1})}};w._vwo_code=code;code.init();})();
+    </script>
+    <!-- End VWO Async SmartCode -->
+    
+<!-- Google Tag Manager for WordPress by gtm4wp.com -->
+<script data-cfasync="false" data-pagespeed-no-defer>
+	var gtm4wp_datalayer_name = "dataLayer";
+	var dataLayer = dataLayer || [];
+</script>
+<!-- End Google Tag Manager for WordPress by gtm4wp.com --><!-- Google tag (gtag.js) consent mode dataLayer added by Site Kit -->
+<script id="google_gtagjs-js-consent-mode-data-layer">
+window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}
+gtag('consent', 'default', {"ad_personalization":"denied","ad_storage":"denied","ad_user_data":"denied","analytics_storage":"denied","functionality_storage":"denied","security_storage":"denied","personalization_storage":"denied","region":["AT","BE","BG","CH","CY","CZ","DE","DK","EE","ES","FI","FR","GB","GR","HR","HU","IE","IS","IT","LI","LT","LU","LV","MT","NL","NO","PL","PT","RO","SE","SI","SK"],"wait_for_update":500});
+window._googlesitekitConsentCategoryMap = {"statistics":["analytics_storage"],"marketing":["ad_storage","ad_user_data","ad_personalization"],"functional":["functionality_storage","security_storage"],"preferences":["personalization_storage"]};
+window._googlesitekitConsents = {"ad_personalization":"denied","ad_storage":"denied","ad_user_data":"denied","analytics_storage":"denied","functionality_storage":"denied","security_storage":"denied","personalization_storage":"denied","region":["AT","BE","BG","CH","CY","CZ","DE","DK","EE","ES","FI","FR","GB","GR","HR","HU","IE","IS","IT","LI","LT","LU","LV","MT","NL","NO","PL","PT","RO","SE","SI","SK"],"wait_for_update":500};
+</script>
+<!-- End Google tag (gtag.js) consent mode dataLayer added by Site Kit -->
+
+	<!-- This site is optimized with the Yoast SEO plugin v26.3 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>Página no encontrada - Bridge for Billions</title>
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:title" content="Página no encontrada - Bridge for Billions" />
+	<meta property="og:site_name" content="Bridge for Billions" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://www.bridgeforbillions.org/#website","url":"https://www.bridgeforbillions.org/","name":"Bridge for Billions","description":"Connecting growth","publisher":{"@id":"https://www.bridgeforbillions.org/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.bridgeforbillions.org/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"en-US"},{"@type":"Organization","@id":"https://www.bridgeforbillions.org/#organization","name":"Bridge for Billions","url":"https://www.bridgeforbillions.org/","logo":{"@type":"ImageObject","inLanguage":"en-US","@id":"https://www.bridgeforbillions.org/#/schema/logo/image/","url":"https://www.bridgeforbillions.org/wp-content/uploads/2020/07/Bridge-for-Billions-logo06.svg","contentUrl":"https://www.bridgeforbillions.org/wp-content/uploads/2020/07/Bridge-for-Billions-logo06.svg","width":1,"height":1,"caption":"Bridge for Billions"},"image":{"@id":"https://www.bridgeforbillions.org/#/schema/logo/image/"}}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='//js.hs-scripts.com' />
+<link rel='dns-prefetch' href='//ajax.googleapis.com' />
+<link rel='dns-prefetch' href='//www.bridgeforbillions.org' />
+<link rel='dns-prefetch' href='//api.mapbox.com' />
+<link rel='dns-prefetch' href='//www.googletagmanager.com' />
+<link rel="alternate" type="application/rss+xml" title="Bridge for Billions &raquo; Feed" href="https://www.bridgeforbillions.org/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Bridge for Billions &raquo; Comments Feed" href="https://www.bridgeforbillions.org/comments/feed/" />
+<script>
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/16.0.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/16.0.1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.bridgeforbillions.org\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.8.5"}};
+/*! This file is auto-generated */
+!function(s,n){var o,i,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),a=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===a[t]})}function u(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);for(var n=e.getImageData(16,16,1,1),a=0;a<n.data.length;a++)if(0!==n.data[a])return!1;return!0}function f(e,t,n,a){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!a(e,"\ud83e\udedf")}return!1}function g(e,t,n,a){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):s.createElement("canvas"),o=r.getContext("2d",{willReadFrequently:!0}),i=(o.textBaseline="top",o.font="600 32px Arial",{});return e.forEach(function(e){i[e]=t(o,e,n,a)}),i}function t(e){var t=s.createElement("script");t.src=e,t.defer=!0,s.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",i=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){s.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+g.toString()+"("+[JSON.stringify(i),f.toString(),p.toString(),u.toString()].join(",")+"));",a=new Blob([e],{type:"text/javascript"}),r=new Worker(URL.createObjectURL(a),{name:"wpTestEmojiSupports"});return void(r.onmessage=function(e){c(n=e.data),r.terminate(),t(n)})}catch(e){}c(n=g(i,f,p,u))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
+</script>
+<style id='wp-emoji-styles-inline-css'>
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+</style>
+<link rel='stylesheet' id='jet-engine-frontend-css' href='https://www.bridgeforbillions.org/wp-content/plugins/jet-engine/assets/css/frontend.css?ver=3.7.9.1' media='all' />
+<style id='global-styles-inline-css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:root { --wp--style--global--content-size: 800px;--wp--style--global--wide-size: 1200px; }:where(body) { margin: 0; }.wp-site-blocks > .alignleft { float: left; margin-right: 2em; }.wp-site-blocks > .alignright { float: right; margin-left: 2em; }.wp-site-blocks > .aligncenter { justify-content: center; margin-left: auto; margin-right: auto; }:where(.wp-site-blocks) > * { margin-block-start: 24px; margin-block-end: 0; }:where(.wp-site-blocks) > :first-child { margin-block-start: 0; }:where(.wp-site-blocks) > :last-child { margin-block-end: 0; }:root { --wp--style--block-gap: 24px; }:root :where(.is-layout-flow) > :first-child{margin-block-start: 0;}:root :where(.is-layout-flow) > :last-child{margin-block-end: 0;}:root :where(.is-layout-flow) > *{margin-block-start: 24px;margin-block-end: 0;}:root :where(.is-layout-constrained) > :first-child{margin-block-start: 0;}:root :where(.is-layout-constrained) > :last-child{margin-block-end: 0;}:root :where(.is-layout-constrained) > *{margin-block-start: 24px;margin-block-end: 0;}:root :where(.is-layout-flex){gap: 24px;}:root :where(.is-layout-grid){gap: 24px;}.is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}a:where(:not(.wp-element-button)){text-decoration: underline;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;line-height: inherit;padding: calc(0.667em + 2px) calc(1.333em + 2px);text-decoration: none;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel='stylesheet' id='mapbox-gl-css-css' href='https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css?ver=6.8.5' media='all' />
+<link rel='stylesheet' id='plus-pre-loader-css-css' href='//www.bridgeforbillions.org/wp-content/plugins/theplus_elementor_addon/assets/css/main/pre-loader/plus-pre-loader.min.css?ver=6.2.5' media='all' />
+<link rel='stylesheet' id='plus-icons-mind-css-css' href='//www.bridgeforbillions.org/wp-content/plugins/theplus_elementor_addon/assets/css/extra/iconsmind.min.css?ver=6.2.5' media='all' />
+<link rel='stylesheet' id='hello-elementor-css' href='https://www.bridgeforbillions.org/wp-content/themes/hello-elementor/assets/css/reset.css?ver=3.4.7' media='all' />
+<link rel='stylesheet' id='hello-elementor-theme-style-css' href='https://www.bridgeforbillions.org/wp-content/themes/hello-elementor/assets/css/theme.css?ver=3.4.7' media='all' />
+<link rel='stylesheet' id='hello-elementor-header-footer-css' href='https://www.bridgeforbillions.org/wp-content/themes/hello-elementor/assets/css/header-footer.css?ver=3.4.7' media='all' />
+<link rel='stylesheet' id='jet-popup-frontend-css' href='https://www.bridgeforbillions.org/wp-content/plugins/jet-popup/assets/css/jet-popup-frontend.css?ver=2.0.12' media='all' />
+<link rel='stylesheet' id='e-animation-shrink-css' href='https://www.bridgeforbillions.org/wp-content/plugins/elementor/assets/lib/animations/styles/e-animation-shrink.min.css?ver=3.33.0' media='all' />
+<link rel='stylesheet' id='e-sticky-css' href='https://www.bridgeforbillions.org/wp-content/plugins/elementor-pro/assets/css/modules/sticky.min.css?ver=3.33.1' media='all' />
+<link rel='stylesheet' id='elementor-frontend-css' href='https://www.bridgeforbillions.org/wp-content/plugins/elementor/assets/css/frontend.min.css?ver=3.33.0' media='all' />
+<link rel='stylesheet' id='widget-social-icons-css' href='https://www.bridgeforbillions.org/wp-content/plugins/elementor/assets/css/widget-social-icons.min.css?ver=3.33.0' media='all' />
+<link rel='stylesheet' id='e-apple-webkit-css' href='https://www.bridgeforbillions.org/wp-content/plugins/elementor/assets/css/conditionals/apple-webkit.min.css?ver=3.33.0' media='all' />
+<link rel='stylesheet' id='widget-heading-css' href='https://www.bridgeforbillions.org/wp-content/plugins/elementor/assets/css/widget-heading.min.css?ver=3.33.0' media='all' />
+<link rel='stylesheet' id='widget-icon-list-css' href='https://www.bridgeforbillions.org/wp-content/plugins/elementor/assets/css/widget-icon-list.min.css?ver=3.33.0' media='all' />
+<link rel='stylesheet' id='e-animation-grow-css' href='https://www.bridgeforbillions.org/wp-content/plugins/elementor/assets/lib/animations/styles/e-animation-grow.min.css?ver=3.33.0' media='all' />
+<link rel='stylesheet' id='widget-image-css' href='https://www.bridgeforbillions.org/wp-content/plugins/elementor/assets/css/widget-image.min.css?ver=3.33.0' media='all' />
+<link rel='stylesheet' id='elementor-post-14502-css' href='https://www.bridgeforbillions.org/wp-content/uploads/elementor/css/post-14502.css?ver=1774710697' media='all' />
+<link rel='stylesheet' id='cpel-language-switcher-css' href='https://www.bridgeforbillions.org/wp-content/plugins/connect-polylang-elementor/assets/css/language-switcher.min.css?ver=2.5.3' media='all' />
+<link rel='stylesheet' id='font-awesome-5-all-css' href='https://www.bridgeforbillions.org/wp-content/plugins/elementor/assets/lib/font-awesome/css/all.min.css?ver=3.33.0' media='all' />
+<link rel='stylesheet' id='font-awesome-4-shim-css' href='https://www.bridgeforbillions.org/wp-content/plugins/elementor/assets/lib/font-awesome/css/v4-shims.min.css?ver=3.33.0' media='all' />
+<link rel='stylesheet' id='elementor-post-107078-css' href='https://www.bridgeforbillions.org/wp-content/uploads/elementor/css/post-107078.css?ver=1774710697' media='all' />
+<link rel='stylesheet' id='elementor-post-399-css' href='https://www.bridgeforbillions.org/wp-content/uploads/elementor/css/post-399.css?ver=1774710697' media='all' />
+<link rel='stylesheet' id='elementor-post-93640-css' href='https://www.bridgeforbillions.org/wp-content/uploads/elementor/css/post-93640.css?ver=1774710752' media='all' />
+<script src="https://www.bridgeforbillions.org/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script src="https://www.bridgeforbillions.org/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<script src="//www.bridgeforbillions.org/wp-content/plugins/theplus_elementor_addon/assets/js/main/pre-loader/plus-pre-loader-extra-transition.min.js?ver=6.2.5" id="plus-pre-loader-js2-js"></script>
+<script src="//www.bridgeforbillions.org/wp-content/plugins/theplus_elementor_addon/assets/js/main/pre-loader/plus-pre-loader.min.js?ver=6.2.5" id="plus-pre-loader-js-js"></script>
+<script src="https://www.bridgeforbillions.org/wp-content/plugins/elementor/assets/lib/font-awesome/js/v4-shims.min.js?ver=3.33.0" id="font-awesome-4-shim-js"></script>
+
+<!-- Google tag (gtag.js) snippet added by Site Kit -->
+<!-- Google Analytics snippet added by Site Kit -->
+<script src="https://www.googletagmanager.com/gtag/js?id=G-3Z8LPENH6K" id="google_gtagjs-js" async></script>
+<script id="google_gtagjs-js-after">
+window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}
+gtag("set","linker",{"domains":["www.bridgeforbillions.org"]});
+gtag("js", new Date());
+gtag("set", "developer_id.dZTNiMT", true);
+gtag("config", "G-3Z8LPENH6K");
+</script>
+<link rel="https://api.w.org/" href="https://www.bridgeforbillions.org/wp-json/" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.bridgeforbillions.org/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 6.8.5" />
+<meta name="generator" content="Site Kit by Google 1.165.0" />			<!-- DO NOT COPY THIS SNIPPET! Start of Page Analytics Tracking for HubSpot WordPress plugin v11.3.21-->
+			<script class="hsq-set-content-id" data-content-id="standard-page">
+				var _hsq = _hsq || [];
+				_hsq.push(["setContentType", "standard-page"]);
+			</script>
+			<!-- DO NOT COPY THIS SNIPPET! End of Page Analytics Tracking for HubSpot WordPress plugin -->
+			    <script language="JavaScript" type="text/javascript">
+		
+
+;(function($) {
+
+   'use strict'
+
+    var testMobile;
+    var isMobile = {
+        Android: function() {
+            return navigator.userAgent.match(/Android/i);
+        },
+        BlackBerry: function() {
+            return navigator.userAgent.match(/BlackBerry/i);
+        },
+        iOS: function() {
+            return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+        },
+        Opera: function() {
+            return navigator.userAgent.match(/Opera Mini/i);
+        },
+        Windows: function() {
+            return navigator.userAgent.match(/IEMobile/i);
+        },
+        any: function() {
+            return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+        }
+    };
+
+	var parallax = function() {
+		testMobile = isMobile.any();
+		if (testMobile == null) {
+			$(".parallax").parallax("50%", 0.3);
+		}
+	};
+
+	// Dom Ready
+	$(function() {
+		parallax();
+   	});
+})(jQuery);
+
+/*
+jQuery Parallax 1.1.3
+Author: Ian Lunn
+Plugin URL: http://www.ianlunn.co.uk/plugins/jquery-parallax/
+
+Dual licensed under the MIT and GPL licenses:
+http://www.opensource.org/licenses/mit-license.php
+http://www.gnu.org/licenses/gpl.html
+*/
+!function(n){var t=n(window),e=t.height();t.resize(function(){e=t.height()}),n.fn.parallax=function(o,r,i){function u(){var i=t.scrollTop();l.each(function(t,u){var l=n(u),f=l.offset().top,s=a(l);i>f+s||f>i+e||l.css("backgroundPosition",o+" "+Math.round((l.data("firstTop")-i)*r)+"px")})}var a,l=n(this);l.each(function(t,e){$element=n(e),$element.data("firstTop",$element.offset().top)}),a=i?function(n){return n.outerHeight(!0)}:function(n){return n.height()},(arguments.length<1||null===o)&&(o="50%"),(arguments.length<2||null===r)&&(r=.1),(arguments.length<3||null===i)&&(i=!0),t.bind("scroll",u).resize(u),u()}}(jQuery);
+
+    </script>
+    
+<!-- Google Tag Manager for WordPress by gtm4wp.com -->
+<!-- GTM Container placement set to footer -->
+<script data-cfasync="false" data-pagespeed-no-defer>
+	var dataLayer_content = {"pagePostType":"404-error"};
+	dataLayer.push( dataLayer_content );
+</script>
+<script data-cfasync="false" data-pagespeed-no-defer>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KGZK8CJD');
+</script>
+<!-- End Google Tag Manager for WordPress by gtm4wp.com -->
+		<script>
+		(function(h,o,t,j,a,r){
+			h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+			h._hjSettings={hjid:295052,hjsv:5};
+			a=o.getElementsByTagName('head')[0];
+			r=o.createElement('script');r.async=1;
+			r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+			a.appendChild(r);
+		})(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+		</script>
+				<style>*:not(.elementor-editor-active) .plus-conditions--hidden {display: none;}</style> 
+		<meta name="generator" content="Elementor 3.33.0; features: e_font_icon_svg; settings: css_print_method-external, google_font-enabled, font_display-auto">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-W2LTQ5J');</script>
+<!-- End Google Tag Manager -->
+<script>function initApollo(){var n=Math.random().toString(36).substring(7),o=document.createElement("script");o.src="https://assets.apollo.io/micro/website-tracker/tracker.iife.js?nocache="+n,o.async=!0,o.defer=!0,o.onload=function(){window.trackingFunctions.onLoad({appId:"663127f2cfd97e05867f117b"})},document.head.appendChild(o)}initApollo();</script>
+			<style>
+				.e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload),
+				.e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload) * {
+					background-image: none !important;
+				}
+				@media screen and (max-height: 1024px) {
+					.e-con.e-parent:nth-of-type(n+3):not(.e-lazyloaded):not(.e-no-lazyload),
+					.e-con.e-parent:nth-of-type(n+3):not(.e-lazyloaded):not(.e-no-lazyload) * {
+						background-image: none !important;
+					}
+				}
+				@media screen and (max-height: 640px) {
+					.e-con.e-parent:nth-of-type(n+2):not(.e-lazyloaded):not(.e-no-lazyload),
+					.e-con.e-parent:nth-of-type(n+2):not(.e-lazyloaded):not(.e-no-lazyload) * {
+						background-image: none !important;
+					}
+				}
+			</style>
+			
+<!-- Google Tag Manager snippet added by Site Kit -->
+<script>
+			( function( w, d, s, l, i ) {
+				w[l] = w[l] || [];
+				w[l].push( {'gtm.start': new Date().getTime(), event: 'gtm.js'} );
+				var f = d.getElementsByTagName( s )[0],
+					j = d.createElement( s ), dl = l != 'dataLayer' ? '&l=' + l : '';
+				j.async = true;
+				j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+				f.parentNode.insertBefore( j, f );
+			} )( window, document, 'script', 'dataLayer', 'GTM-W2LTQ5J' );
+			
+</script>
+
+<!-- End Google Tag Manager snippet added by Site Kit -->
+		<style id="wp-custom-css">
+			.comments-area a, .page-content a {
+    text-decoration: none;
+}		</style>
+			<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" /></head>
+<body class="error404 wp-custom-logo wp-embed-responsive wp-theme-hello-elementor hello-elementor-default elementor-default elementor-template-canvas elementor-kit-14502 elementor-page-93640">
+			<!-- Google Tag Manager (noscript) snippet added by Site Kit -->
+		<noscript>
+			<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W2LTQ5J" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+		</noscript>
+		<!-- End Google Tag Manager (noscript) snippet added by Site Kit -->
+		<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W2LTQ5J"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+		<div data-elementor-type="error-404" data-elementor-id="93640" class="elementor elementor-93640 elementor-location-single" data-elementor-post-type="elementor_library">
+					<section class="elementor-section elementor-top-section elementor-element elementor-element-4f9c074b elementor-section-content-space-between elementor-section-height-full elementor-section-full_width elementor-section-items-stretch elementor-section-height-default" data-id="4f9c074b" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;gradient&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-5a8bd12f" data-id="5a8bd12f" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<section class="elementor-section elementor-inner-section elementor-element elementor-element-a9c521b elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="a9c521b" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-04fbf29" data-id="04fbf29" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-1dcfded elementor-widget elementor-widget-image" data-id="1dcfded" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+															<img width="800" height="575" src="https://www.bridgeforbillions.org/wp-content/uploads/2024/08/Doubts-Questions01-1080x776.png" class="attachment-large size-large wp-image-112974" alt="" srcset="https://www.bridgeforbillions.org/wp-content/uploads/2024/08/Doubts-Questions01-1080x776.png 1080w, https://www.bridgeforbillions.org/wp-content/uploads/2024/08/Doubts-Questions01-400x287.png 400w, https://www.bridgeforbillions.org/wp-content/uploads/2024/08/Doubts-Questions01-768x552.png 768w, https://www.bridgeforbillions.org/wp-content/uploads/2024/08/Doubts-Questions01-1536x1103.png 1536w, https://www.bridgeforbillions.org/wp-content/uploads/2024/08/Doubts-Questions01-2048x1471.png 2048w" sizes="(max-width: 800px) 100vw, 800px" />															</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-332f865" data-id="332f865" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-be51c12 elementor-widget elementor-widget-image" data-id="be51c12" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+															<img width="1" height="1" src="https://www.bridgeforbillions.org/wp-content/uploads/2021/05/B4Blogo_SEC_RGB.svg" class="attachment-large size-large wp-image-70598" alt="" />															</div>
+				</div>
+				<div class="elementor-element elementor-element-444a14f elementor-widget elementor-widget-heading" data-id="444a14f" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<p class="elementor-heading-title elementor-size-default">404</p>				</div>
+				</div>
+				<div class="elementor-element elementor-element-40398d7 elementor-widget elementor-widget-heading" data-id="40398d7" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h3 class="elementor-heading-title elementor-size-default">You might have taken a wrong turn</h3>				</div>
+				</div>
+				<div class="elementor-element elementor-element-bc07997 elementor-widget elementor-widget-heading" data-id="bc07997" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h3 class="elementor-heading-title elementor-size-default">    <p>Don't worry, you can go back to the <a href="/" style="color: #00FFAF">homepage</a> or, if you prefer, let us know what you're looking for through our <a href="/contact-form" style="color: #00FFAF">contact form</a>. We're here to help!</p>
+</h3>				</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+					</div>
+		</div>
+					</div>
+		</section>
+				</div>
+		<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"\/*"},{"not":{"href_matches":["\/wp-*.php","\/wp-admin\/*","\/wp-content\/uploads\/*","\/wp-content\/*","\/wp-content\/plugins\/*","\/wp-content\/themes\/hello-elementor\/*","\/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<!--
+The IP2Location Redirection is using IP2Location LITE geolocation database. Please visit https://lite.ip2location.com for more information.
+abe8b029f948126125810fbe66368c39a3d0dd51
+-->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css" integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous"></script>
+
+<script>
+
+window.addEventListener("load", function(){
+	jQuery( function($) {
+		$(document).ready(function () {
+			$('.projects-slider > .elementor-column-wrap > .elementor-widget-wrap').slick({
+				dots: false,
+				arrows: true,
+				prevArrow: '<div class="slick-prev"><i class="fa fa-angle-left" aria-hidden="true"></i></div>',
+				nextArrow: '<div class="slick-next"><i class="fa fa-angle-right" aria-hidden="true"></i></div>',
+				infinite: false,
+				speed: 300,
+				slidesToShow: 3,
+				slidesToScroll: 1,
+				responsive: [
+					{
+						breakpoint: 600,
+						settings: {
+							slidesToShow: 2,
+							slidesToScroll: 1
+						}
+					},
+					{
+						breakpoint: 480,
+						settings: {
+							slidesToShow: 1,
+							slidesToScroll: 1
+						}
+					}
+				]
+			});
+		});
+	});
+});
+</script>
+
+<!-- GTM Container placement set to footer -->
+<!-- Google Tag Manager (noscript) -->
+				<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KGZK8CJD" height="0" width="0" style="display:none;visibility:hidden" aria-hidden="true"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->		<div data-elementor-type="popup" data-elementor-id="107062" class="elementor elementor-107062 elementor-location-popup" data-elementor-settings="{&quot;entrance_animation&quot;:&quot;slideInLeft&quot;,&quot;exit_animation&quot;:&quot;slideInLeft&quot;,&quot;avoid_multiple_popups&quot;:&quot;yes&quot;,&quot;entrance_animation_duration&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1.2,&quot;sizes&quot;:[]},&quot;a11y_navigation&quot;:&quot;yes&quot;,&quot;timing&quot;:[]}" data-elementor-post-type="elementor_library">
+					<section class="elementor-section elementor-top-section elementor-element elementor-element-2e10443 elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="2e10443" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+						<div class="elementor-container elementor-column-gap-no">
+					<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-4bcfa68" data-id="4bcfa68" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-ddbdf82 elementor-widget elementor-widget-heading" data-id="ddbdf82" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h2 class="elementor-heading-title elementor-size-default">Get in touch</h2>				</div>
+				</div>
+				<div class="elementor-element elementor-element-545ae5f0 elementor-widget elementor-widget-text-editor" data-id="545ae5f0" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									Fill in the form below and our team will be happy to assist you								</div>
+				</div>
+				<div class="elementor-element elementor-element-e50fba7 elementor-button-align-start elementor-widget elementor-widget-form" data-id="e50fba7" data-element_type="widget" data-settings="{&quot;step_next_label&quot;:&quot;Next&quot;,&quot;step_previous_label&quot;:&quot;Previous&quot;,&quot;step_type&quot;:&quot;number_text&quot;,&quot;step_icon_shape&quot;:&quot;circle&quot;}" data-widget_type="form.default">
+				<div class="elementor-widget-container">
+							<form class="elementor-form" method="post" name="New Form" aria-label="New Form">
+			<input type="hidden" name="post_id" value="107062"/>
+			<input type="hidden" name="form_id" value="e50fba7"/>
+			<input type="hidden" name="referer_title" value="Página no encontrada - Bridge for Billions" />
+
+			
+			<div class="elementor-form-fields-wrapper elementor-labels-above">
+								<div class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-first_name elementor-col-50 elementor-field-required">
+												<label for="form-field-first_name" class="elementor-field-label">
+								First Name							</label>
+														<input size="1" type="text" name="form_fields[first_name]" id="form-field-first_name" class="elementor-field elementor-size-md  elementor-field-textual" required="required">
+											</div>
+								<div class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-last_name elementor-col-50">
+												<label for="form-field-last_name" class="elementor-field-label">
+								Last Name							</label>
+														<input size="1" type="text" name="form_fields[last_name]" id="form-field-last_name" class="elementor-field elementor-size-md  elementor-field-textual">
+											</div>
+								<div class="elementor-field-type-email elementor-field-group elementor-column elementor-field-group-email elementor-col-100 elementor-field-required">
+												<label for="form-field-email" class="elementor-field-label">
+								Corporate email							</label>
+														<input size="1" type="email" name="form_fields[email]" id="form-field-email" class="elementor-field elementor-size-md  elementor-field-textual" required="required">
+											</div>
+								<div class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-COMPANY elementor-col-50">
+												<label for="form-field-COMPANY" class="elementor-field-label">
+								Company/Organization							</label>
+														<input size="1" type="text" name="form_fields[COMPANY]" id="form-field-COMPANY" class="elementor-field elementor-size-md  elementor-field-textual">
+											</div>
+								<div class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-COUNTRY elementor-col-50">
+												<label for="form-field-COUNTRY" class="elementor-field-label">
+								Country							</label>
+														<input size="1" type="text" name="form_fields[COUNTRY]" id="form-field-COUNTRY" class="elementor-field elementor-size-md  elementor-field-textual">
+											</div>
+								<div class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-field_e1c6652 elementor-col-100">
+												<label for="form-field-field_e1c6652" class="elementor-field-label">
+								Message							</label>
+														<input size="1" type="text" name="form_fields[field_e1c6652]" id="form-field-field_e1c6652" class="elementor-field elementor-size-md  elementor-field-textual" placeholder="Type here...">
+											</div>
+								<div class="elementor-field-type-recaptcha_v3 elementor-field-group elementor-column elementor-field-group-field_5f1010a elementor-col-100 recaptcha_v3-bottomleft">
+					<div class="elementor-field" id="form-field-field_5f1010a"><div class="elementor-g-recaptcha" data-sitekey="6LfYAg4fAAAAAJu1eq5TNxcbNUqCjtW4FZ_B3NoB" data-type="v3" data-action="Form" data-badge="bottomleft" data-size="invisible"></div></div>				</div>
+								<div class="elementor-field-type-acceptance elementor-field-group elementor-column elementor-field-group-field_d0c65e9 elementor-col-100">
+												<label for="form-field-field_d0c65e9" class="elementor-field-label">
+								<div style="color:black;font-size:10px; line-height:1.3em">The personal data provided will be used only to provide you with information. By checking this box, you confirm that you have read and understood our <a href="https://s3.amazonaws.com/assets.bridgeforbillions.org/docs/Privacy_Policy_React.pdf">Privacy Policy.</a> and agree to the terms and conditions stated therein.</div>							</label>
+								<div class="elementor-field-subgroup">
+			<span class="elementor-field-option">
+				<input type="checkbox" name="form_fields[field_d0c65e9]" id="form-field-field_d0c65e9" class="elementor-field elementor-size-md  elementor-acceptance-field">
+							</span>
+		</div>
+						</div>
+								<div class="elementor-field-group elementor-column elementor-field-type-submit elementor-col-100 e-form__buttons">
+					<button class="elementor-button elementor-size-md" type="submit">
+						<span class="elementor-button-content-wrapper">
+																						<span class="elementor-button-text">Send form</span>
+													</span>
+					</button>
+				</div>
+			</div>
+		</form>
+						</div>
+				</div>
+				<div class="elementor-element elementor-element-6dba10a elementor-widget elementor-widget-html" data-id="6dba10a" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+					<script>
+// Do not change anything in the following two lines
+window.VWO = window.VWO || [];
+VWO.event = VWO.event || function () {VWO.push(["event"].concat([].slice.call(arguments)))};
+
+// Replace the property values with your actual values
+VWO.event("b2BContactFormSubmit", {
+"formularioB2B": "Formulario B2B"
+});
+</script>				</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-7fda1ac" data-id="7fda1ac" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-c5f6f1d elementor-widget__width-auto elementor-absolute elementor-view-default elementor-widget elementor-widget-icon" data-id="c5f6f1d" data-element_type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;}" data-widget_type="icon.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-icon-wrapper">
+			<a class="elementor-icon" href="#elementor-action%3Aaction%3Dpopup%3Aclose%26settings%3DeyJkb19ub3Rfc2hvd19hZ2FpbiI6IiJ9">
+			<svg xmlns="http://www.w3.org/2000/svg" id="b6fd41c8-5091-47d5-9048-eb565ae63f10" data-name="Layer 1" width="13.8228" height="13.8945" viewBox="0 0 13.8228 13.8945"><polygon points="13.823 0.705 13.114 0 6.911 6.238 0.709 0 0 0.705 6.206 6.947 0 13.189 0.709 13.895 6.911 7.656 13.114 13.895 13.823 13.189 7.616 6.947 13.823 0.705"></polygon></svg>			</a>
+		</div>
+						</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				</div>
+				<div data-elementor-type="popup" data-elementor-id="106442" class="elementor elementor-106442 elementor-location-popup" data-elementor-settings="{&quot;entrance_animation&quot;:&quot;slideInDown&quot;,&quot;exit_animation&quot;:&quot;slideInDown&quot;,&quot;entrance_animation_duration&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1.2,&quot;sizes&quot;:[]},&quot;a11y_navigation&quot;:&quot;yes&quot;,&quot;timing&quot;:[]}" data-elementor-post-type="elementor_library">
+					<section class="elementor-section elementor-top-section elementor-element elementor-element-6052a4a elementor-section-full_width elementor-section-height-full elementor-section-items-stretch elementor-section-height-default" data-id="6052a4a" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+						<div class="elementor-container elementor-column-gap-extended">
+					<div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-4df9a64" data-id="4df9a64" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-c128e36 elementor-widget elementor-widget-heading" data-id="c128e36" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<span class="elementor-heading-title elementor-size-default">Our work with organizations</span>				</div>
+				</div>
+				<div class="elementor-element elementor-element-f75050f elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-id="f75050f" data-element_type="widget" data-widget_type="divider.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-divider">
+			<span class="elementor-divider-separator">
+						</span>
+		</div>
+						</div>
+				</div>
+				<div class="elementor-element elementor-element-bc27951 elementor-mobile-align-center elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="bc27951" data-element_type="widget" data-widget_type="icon-list.default">
+				<div class="elementor-widget-container">
+							<ul class="elementor-icon-list-items">
+							<li class="elementor-icon-list-item">
+											<a href="https://www.bridgeforbillions.org/business-incubator/">
+
+											<span class="elementor-icon-list-text">Design your entrepreneurship program</span>
+											</a>
+									</li>
+								<li class="elementor-icon-list-item">
+											<a href="https://www.bridgeforbillions.org/entrepreneurship-programs/who-we-work-with/">
+
+											<span class="elementor-icon-list-text">Who we work with</span>
+											</a>
+									</li>
+								<li class="elementor-icon-list-item">
+											<a href="https://www.bridgeforbillions.org/entrepreneurship-programs/our-work-with-esos/">
+
+											<span class="elementor-icon-list-text">Our work with ESOs</span>
+											</a>
+									</li>
+								<li class="elementor-icon-list-item">
+											<a href="https://www.bridgeforbillions.org/regional-eso-reports/">
+
+											<span class="elementor-icon-list-text">Resources and Insights</span>
+											</a>
+									</li>
+								<li class="elementor-icon-list-item">
+											<a href="https://conecta.bridgeforbillions.org/" target="_blank">
+
+											<span class="elementor-icon-list-text">Conecta</span>
+											</a>
+									</li>
+						</ul>
+						</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-cf4b210" data-id="cf4b210" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-fccbb31 elementor-widget elementor-widget-heading" data-id="fccbb31" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<span class="elementor-heading-title elementor-size-default">Entrepreneurship programs</span>				</div>
+				</div>
+				<div class="elementor-element elementor-element-02d8786 elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-id="02d8786" data-element_type="widget" data-widget_type="divider.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-divider">
+			<span class="elementor-divider-separator">
+						</span>
+		</div>
+						</div>
+				</div>
+				<div class="elementor-element elementor-element-8f5df35 elementor-mobile-align-center elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="8f5df35" data-element_type="widget" data-widget_type="icon-list.default">
+				<div class="elementor-widget-container">
+							<ul class="elementor-icon-list-items">
+							<li class="elementor-icon-list-item">
+											<a href="https://www.bridgeforbillions.org/incubation-programs/">
+
+											<span class="elementor-icon-list-text">Join our incubation programs</span>
+											</a>
+									</li>
+								<li class="elementor-icon-list-item">
+											<a href="/entrepreneurs-album/">
+
+											<span class="elementor-icon-list-text">Entrepreneur Community</span>
+											</a>
+									</li>
+								<li class="elementor-icon-list-item">
+											<a href="/meet-our-mentors/">
+
+											<span class="elementor-icon-list-text">Mentor Community</span>
+											</a>
+									</li>
+								<li class="elementor-icon-list-item">
+											<a href="https://43666717.hs-sites.com/knowledge-base">
+
+											<span class="elementor-icon-list-text">FAQs about our programs</span>
+											</a>
+									</li>
+								<li class="elementor-icon-list-item">
+											<a href="http://incubation.bridgeforbillions.org" target="_blank">
+
+											<span class="elementor-icon-list-text">Access to the platform</span>
+											</a>
+									</li>
+						</ul>
+						</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-79d6545" data-id="79d6545" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-ec59e18 elementor-widget elementor-widget-heading" data-id="ec59e18" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<span class="elementor-heading-title elementor-size-default">About <br>us</span>				</div>
+				</div>
+				<div class="elementor-element elementor-element-14866f0 elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-id="14866f0" data-element_type="widget" data-widget_type="divider.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-divider">
+			<span class="elementor-divider-separator">
+						</span>
+		</div>
+						</div>
+				</div>
+				<div class="elementor-element elementor-element-28415da elementor-mobile-align-center elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="28415da" data-element_type="widget" data-widget_type="icon-list.default">
+				<div class="elementor-widget-container">
+							<ul class="elementor-icon-list-items">
+							<li class="elementor-icon-list-item">
+											<a href="/about-us/">
+
+											<span class="elementor-icon-list-text">Who we are</span>
+											</a>
+									</li>
+								<li class="elementor-icon-list-item">
+											<a href="https://www.bridgeforbillions.org/our-impact/">
+
+											<span class="elementor-icon-list-text">Our impact</span>
+											</a>
+									</li>
+								<li class="elementor-icon-list-item">
+											<a href="/blog/">
+
+											<span class="elementor-icon-list-text">Blog</span>
+											</a>
+									</li>
+								<li class="elementor-icon-list-item">
+											<a href="/bridge-talks-main-page">
+
+											<span class="elementor-icon-list-text">Bridge Talks</span>
+											</a>
+									</li>
+								<li class="elementor-icon-list-item">
+											<a href="https://www.bridgeforbillions.org/tools-and-method/">
+
+											<span class="elementor-icon-list-text">Methodology and platform</span>
+											</a>
+									</li>
+								<li class="elementor-icon-list-item">
+											<a href="https://bridgeforbillions.odoo.com/">
+
+											<span class="elementor-icon-list-text">Join us</span>
+											</a>
+									</li>
+						</ul>
+						</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-56d13cc" data-id="56d13cc" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-3ba7bc1 elementor-view-default elementor-widget elementor-widget-icon" data-id="3ba7bc1" data-element_type="widget" data-widget_type="icon.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-icon-wrapper">
+			<a class="elementor-icon" href="#elementor-action%3Aaction%3Dpopup%3Aclose%26settings%3DeyJkb19ub3Rfc2hvd19hZ2FpbiI6IiJ9">
+			<svg xmlns="http://www.w3.org/2000/svg" id="f83e013b-3cc6-4313-9f4e-bdabc4788a23" data-name="Layer 1" width="27.5771" height="27.5771" viewBox="0 0 27.5771 27.5771"><polygon points="27.577 2.828 24.749 0 13.789 10.96 2.828 0 0 2.828 10.959 13.788 0 24.749 2.828 27.577 13.788 16.616 24.749 27.577 27.577 24.749 16.617 13.789 27.577 2.828" style="fill-rule:evenodd"></polygon></svg>			</a>
+		</div>
+						</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				</div>
+				<div data-elementor-type="popup" data-elementor-id="103120" class="elementor elementor-103120 elementor-location-popup" data-elementor-settings="{&quot;entrance_animation&quot;:&quot;fadeIn&quot;,&quot;exit_animation&quot;:&quot;fadeIn&quot;,&quot;entrance_animation_duration&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;0.5&quot;,&quot;sizes&quot;:[]},&quot;a11y_navigation&quot;:&quot;yes&quot;,&quot;timing&quot;:{&quot;times_times&quot;:1,&quot;times_period&quot;:&quot;week&quot;,&quot;times&quot;:&quot;yes&quot;,&quot;devices_devices&quot;:[&quot;desktop&quot;,&quot;tablet&quot;],&quot;devices&quot;:&quot;yes&quot;}}" data-elementor-post-type="elementor_library">
+					<section class="elementor-section elementor-top-section elementor-element elementor-element-3d8a9d74 elementor-reverse-tablet elementor-reverse-mobile elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="3d8a9d74" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-4b82ad71" data-id="4b82ad71" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-3b420b87 elementor-widget elementor-widget-spacer" data-id="3b420b87" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+						</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-66 elementor-top-column elementor-element elementor-element-6e0d75cd" data-id="6e0d75cd" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-363762c3 elementor-widget elementor-widget-heading" data-id="363762c3" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h3 class="elementor-heading-title elementor-size-default">Subscribe to our newsletter!</h3>				</div>
+				</div>
+				<div class="elementor-element elementor-element-63f1e388 elementor-widget elementor-widget-text-editor" data-id="63f1e388" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									<p>If you want to keep up to date with our work, important news and meet the people who make it all possible at Bridge for Billions, feel free to subscribe to our newsletter!</p>								</div>
+				</div>
+				<div class="elementor-element elementor-element-103d066 elementor-widget elementor-widget-html" data-id="103d066" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+					<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
+
+
+<div id="HS_Form_Newsletter" class="HS_Form_Form"></div>
+
+<script>
+  hbspt.forms.create({
+    region: "na1",
+    portalId: "5647943",
+    css: "",
+    target: '#HS_Form_Newsletter',
+    formId: "6ddab943-8758-4faf-bdb0-7c5a22714040"
+  });
+</script>				</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				</div>
+					<script>
+				const lazyloadRunObserver = () => {
+					const lazyloadBackgrounds = document.querySelectorAll( `.e-con.e-parent:not(.e-lazyloaded)` );
+					const lazyloadBackgroundObserver = new IntersectionObserver( ( entries ) => {
+						entries.forEach( ( entry ) => {
+							if ( entry.isIntersecting ) {
+								let lazyloadBackground = entry.target;
+								if( lazyloadBackground ) {
+									lazyloadBackground.classList.add( 'e-lazyloaded' );
+								}
+								lazyloadBackgroundObserver.unobserve( entry.target );
+							}
+						});
+					}, { rootMargin: '200px 0px 200px 0px' } );
+					lazyloadBackgrounds.forEach( ( lazyloadBackground ) => {
+						lazyloadBackgroundObserver.observe( lazyloadBackground );
+					} );
+				};
+				const events = [
+					'DOMContentLoaded',
+					'elementor/lazyload/observe',
+				];
+				events.forEach( ( event ) => {
+					document.addEventListener( event, lazyloadRunObserver );
+				} );
+			</script>
+			<link rel='stylesheet' id='elementor-post-107062-css' href='https://www.bridgeforbillions.org/wp-content/uploads/elementor/css/post-107062.css?ver=1774710697' media='all' />
+<link rel='stylesheet' id='widget-form-css' href='https://www.bridgeforbillions.org/wp-content/plugins/elementor-pro/assets/css/widget-form.min.css?ver=3.33.1' media='all' />
+<link rel='stylesheet' id='e-animation-slideInLeft-css' href='https://www.bridgeforbillions.org/wp-content/plugins/elementor/assets/lib/animations/styles/slideInLeft.min.css?ver=3.33.0' media='all' />
+<link rel='stylesheet' id='e-popup-css' href='https://www.bridgeforbillions.org/wp-content/plugins/elementor-pro/assets/css/conditionals/popup.min.css?ver=3.33.1' media='all' />
+<link rel='stylesheet' id='elementor-post-106442-css' href='https://www.bridgeforbillions.org/wp-content/uploads/elementor/css/post-106442.css?ver=1774710698' media='all' />
+<link rel='stylesheet' id='widget-divider-css' href='https://www.bridgeforbillions.org/wp-content/plugins/elementor/assets/css/widget-divider.min.css?ver=3.33.0' media='all' />
+<link rel='stylesheet' id='e-animation-slideInDown-css' href='https://www.bridgeforbillions.org/wp-content/plugins/elementor/assets/lib/animations/styles/slideInDown.min.css?ver=3.33.0' media='all' />
+<link rel='stylesheet' id='elementor-post-103120-css' href='https://www.bridgeforbillions.org/wp-content/uploads/elementor/css/post-103120.css?ver=1774710698' media='all' />
+<link rel='stylesheet' id='widget-spacer-css' href='https://www.bridgeforbillions.org/wp-content/plugins/elementor/assets/css/widget-spacer.min.css?ver=3.33.0' media='all' />
+<link rel='stylesheet' id='e-animation-fadeIn-css' href='https://www.bridgeforbillions.org/wp-content/plugins/elementor/assets/lib/animations/styles/fadeIn.min.css?ver=3.33.0' media='all' />
+<script id="leadin-script-loader-js-js-extra">
+var leadin_wordpress = {"userRole":"visitor","pageType":"other","leadinPluginVersion":"11.3.21"};
+</script>
+<script src="https://js.hs-scripts.com/5647943.js?integration=WordPress&amp;ver=11.3.21" id="leadin-script-loader-js-js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js?ver=1.2.75.4" id="mo-google-webfont-js"></script>
+<script id="mailoptin-js-extra">
+var mailoptin_globals = {"public_js":"https:\/\/www.bridgeforbillions.org\/wp-content\/plugins\/mailoptin\/src\/core\/src\/assets\/js\/src","public_sound":"https:\/\/www.bridgeforbillions.org\/wp-content\/plugins\/mailoptin\/src\/core\/src\/assets\/sound\/","mailoptin_ajaxurl":"\/wp-content\/themes\/starter-starter\/img\/logo.svg?mailoptin-ajax=%%endpoint%%","is_customize_preview":"false","disable_impression_tracking":"false","sidebar":"0","js_required_title":"Title is required.","is_new_returning_visitors_cookies":"false"};
+</script>
+<script src="https://www.bridgeforbillions.org/wp-content/plugins/mailoptin/src/core/src/assets/js/mailoptin.min.js?ver=1.2.75.4" id="mailoptin-js"></script>
+<script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js" id="mapbox-gl-js-js"></script>
+<script src="https://www.bridgeforbillions.org/wp-content/plugins/duracelltomi-google-tag-manager/dist/js/gtm4wp-form-move-tracker.js?ver=1.22.1" id="gtm4wp-form-move-tracker-js"></script>
+<script id="tpae-update-popup-js-extra">
+var tpaeUpdatePopup = {"ajax_url":"https:\/\/www.bridgeforbillions.org\/wp-admin\/admin-ajax.php","nonce":"5f258fa791"};
+</script>
+<script src="https://www.bridgeforbillions.org/wp-content/plugins/the-plus-addons-for-elementor-page-builder/includes/user-experience/update-popup/tp-update-plugin-popup.js?ver=6.4.11774844076" id="tpae-update-popup-js"></script>
+<script src="https://www.bridgeforbillions.org/wp-includes/js/jquery/ui/core.min.js?ver=1.13.3" id="jquery-ui-core-js"></script>
+<script src="https://www.bridgeforbillions.org/wp-includes/js/jquery/ui/mouse.min.js?ver=1.13.3" id="jquery-ui-mouse-js"></script>
+<script src="https://www.bridgeforbillions.org/wp-includes/js/jquery/ui/slider.min.js?ver=1.13.3" id="jquery-ui-slider-js"></script>
+<script src="https://www.bridgeforbillions.org/wp-includes/js/jquery/ui/draggable.min.js?ver=1.13.3" id="jquery-ui-draggable-js"></script>
+<script src="https://www.bridgeforbillions.org/wp-includes/js/jquery/jquery.ui.touch-punch.js?ver=0.2.2" id="jquery-touch-punch-js"></script>
+<script src="https://www.bridgeforbillions.org/wp-content/plugins/google-site-kit/dist/assets/js/googlesitekit-consent-mode-bc2e26cfa69fcd4a8261.js" id="googlesitekit-consent-mode-js"></script>
+<script src="https://www.bridgeforbillions.org/wp-content/plugins/jet-engine/assets/lib/jet-plugins/jet-plugins.js?ver=1.1.0" id="jet-plugins-js"></script>
+<script src="https://www.bridgeforbillions.org/wp-content/plugins/jet-popup/assets/js/lib/anime-js/anime.min.js?ver=2.0.2" id="jet-anime-js-js"></script>
+<script id="jet-popup-frontend-js-extra">
+var jetPopupData = {"version":"2.0.12","ajax_url":"https:\/\/www.bridgeforbillions.org\/wp-admin\/admin-ajax.php","isElementor":"true"};
+</script>
+<script src="https://www.bridgeforbillions.org/wp-content/plugins/jet-popup/assets/js/jet-popup-frontend.js?ver=2.0.12" id="jet-popup-frontend-js"></script>
+<script src="https://www.bridgeforbillions.org/wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=3.33.0" id="elementor-webpack-runtime-js"></script>
+<script src="https://www.bridgeforbillions.org/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=3.33.0" id="elementor-frontend-modules-js"></script>
+<script id="elementor-frontend-js-before">
+var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false,"isScriptDebug":false},"i18n":{"shareOnFacebook":"Share on Facebook","shareOnTwitter":"Share on Twitter","pinIt":"Pin it","download":"Download","downloadImage":"Download image","fullscreen":"Fullscreen","zoom":"Zoom","share":"Share","playVideo":"Play Video","previous":"Previous","next":"Next","close":"Close","a11yCarouselPrevSlideMessage":"Previous slide","a11yCarouselNextSlideMessage":"Next slide","a11yCarouselFirstSlideMessage":"This is the first slide","a11yCarouselLastSlideMessage":"This is the last slide","a11yCarouselPaginationBulletMessage":"Go to slide"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"responsive":{"breakpoints":{"mobile":{"label":"Mobile Portrait","value":767,"default_value":767,"direction":"max","is_enabled":true},"mobile_extra":{"label":"Mobile Landscape","value":880,"default_value":880,"direction":"max","is_enabled":false},"tablet":{"label":"Tablet Portrait","value":1024,"default_value":1024,"direction":"max","is_enabled":true},"tablet_extra":{"label":"Tablet Landscape","value":1200,"default_value":1200,"direction":"max","is_enabled":false},"laptop":{"label":"Laptop","value":1366,"default_value":1366,"direction":"max","is_enabled":false},"widescreen":{"label":"Widescreen","value":2400,"default_value":2400,"direction":"min","is_enabled":false}},"hasCustomBreakpoints":false},"version":"3.33.0","is_static":false,"experimentalFeatures":{"e_font_icon_svg":true,"container":true,"nested-elements":true,"home_screen":true,"global_classes_should_enforce_capabilities":true,"e_variables":true,"cloud-library":true,"e_opt_in_v4_page":true,"import-export-customization":true,"mega-menu":true,"e_pro_variables":true},"urls":{"assets":"https:\/\/www.bridgeforbillions.org\/wp-content\/plugins\/elementor\/assets\/","ajaxurl":"https:\/\/www.bridgeforbillions.org\/wp-admin\/admin-ajax.php","uploadUrl":"https:\/\/www.bridgeforbillions.org\/wp-content\/uploads"},"nonces":{"floatingButtonsClickTracking":"96d8400acd"},"swiperClass":"swiper","settings":{"editorPreferences":[]},"kit":{"active_breakpoints":["viewport_mobile","viewport_tablet"],"lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes"},"post":{"id":0,"title":"P\u00e1gina no encontrada - Bridge for Billions","excerpt":""}};
+</script>
+<script src="https://www.bridgeforbillions.org/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.33.0" id="elementor-frontend-js"></script>
+<script src="https://www.bridgeforbillions.org/wp-content/plugins/elementor-pro/assets/lib/sticky/jquery.sticky.min.js?ver=3.33.1" id="e-sticky-js"></script>
+<script src="https://www.google.com/recaptcha/api.js?render=explicit&amp;ver=3.33.1" id="elementor-recaptcha_v3-api-js"></script>
+<script src="https://www.bridgeforbillions.org/wp-content/plugins/elementor-pro/assets/js/webpack-pro.runtime.min.js?ver=3.33.1" id="elementor-pro-webpack-runtime-js"></script>
+<script src="https://www.bridgeforbillions.org/wp-includes/js/dist/hooks.min.js?ver=4d63a3d491d11ffd8ac6" id="wp-hooks-js"></script>
+<script src="https://www.bridgeforbillions.org/wp-includes/js/dist/i18n.min.js?ver=5e580eb46a90c2b997e6" id="wp-i18n-js"></script>
+<script id="wp-i18n-js-after">
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+</script>
+<script id="elementor-pro-frontend-js-before">
+var ElementorProFrontendConfig = {"ajaxurl":"https:\/\/www.bridgeforbillions.org\/wp-admin\/admin-ajax.php","nonce":"b658190499","urls":{"assets":"https:\/\/www.bridgeforbillions.org\/wp-content\/plugins\/elementor-pro\/assets\/","rest":"https:\/\/www.bridgeforbillions.org\/wp-json\/"},"settings":{"lazy_load_background_images":true},"popup":{"hasPopUps":true},"shareButtonsNetworks":{"facebook":{"title":"Facebook","has_counter":true},"twitter":{"title":"Twitter"},"linkedin":{"title":"LinkedIn","has_counter":true},"pinterest":{"title":"Pinterest","has_counter":true},"reddit":{"title":"Reddit","has_counter":true},"vk":{"title":"VK","has_counter":true},"odnoklassniki":{"title":"OK","has_counter":true},"tumblr":{"title":"Tumblr"},"digg":{"title":"Digg"},"skype":{"title":"Skype"},"stumbleupon":{"title":"StumbleUpon","has_counter":true},"mix":{"title":"Mix"},"telegram":{"title":"Telegram"},"pocket":{"title":"Pocket","has_counter":true},"xing":{"title":"XING","has_counter":true},"whatsapp":{"title":"WhatsApp"},"email":{"title":"Email"},"print":{"title":"Print"},"x-twitter":{"title":"X"},"threads":{"title":"Threads"}},"facebook_sdk":{"lang":"en_US","app_id":""},"lottie":{"defaultAnimationUrl":"https:\/\/www.bridgeforbillions.org\/wp-content\/plugins\/elementor-pro\/modules\/lottie\/assets\/animations\/default.json"}};
+</script>
+<script src="https://www.bridgeforbillions.org/wp-content/plugins/elementor-pro/assets/js/frontend.min.js?ver=3.33.1" id="elementor-pro-frontend-js"></script>
+<script src="https://www.bridgeforbillions.org/wp-content/plugins/elementor-pro/assets/js/elements-handlers.min.js?ver=3.33.1" id="pro-elements-handlers-js"></script>
+<script src="https://www.bridgeforbillions.org/wp-content/plugins/jet-popup/includes/elementor/assets/js/jet-popup-elementor-frontend.js?ver=2.0.12" id="jet-popup-elementor-frontend-js"></script>
+<script src="https://www.bridgeforbillions.org/wp-content/plugins/the-plus-addons-for-elementor-page-builder/modules/extensions/equal-height/plus-equal-height.min.js?ver=6.4.1" id="plus-equal-height-js"></script>
+	</body>
+</html>
