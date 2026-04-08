@@ -1,0 +1,17 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "salty-docs",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "8889", "--directory", "/Users/nathanielbehar/Desktop/Claude/salty-docs"],
+      "port": 8889
+    },
+    {
+      "name": "bridge-deck",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "8080", "--directory", "/Users/nathanielbehar/Desktop/Claude/salty-docs/proposals/bridge-for-billions"],
+      "port": 8080
+    }
+  ]
+}
