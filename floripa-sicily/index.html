@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<title>SALTY × Floripa — Sicily 2026 Partner Toolkit</title>
+<style>
+  @font-face { font-family: 'TAN Headline'; src: url('../assets/salty-design/TAN-Headline/TANHEADLINE-Regular.ttf') format('truetype'); font-display: swap; }
+  @font-face { font-family: 'Roca'; src: url('../assets/salty-design/Roca Regular.ttf') format('truetype'); font-weight: 400; font-display: swap; }
+  @font-face { font-family: 'Roca'; src: url('../assets/salty-design/Roca Bold.ttf') format('truetype'); font-weight: 700; font-display: swap; }
+  @font-face { font-family: 'Roca'; src: url('../assets/salty-design/Roca Italic.ttf') format('truetype'); font-weight: 400; font-style: italic; font-display: swap; }
+
+  :root {
+    --cream: #F7F4ED;
+    --cream-warm: #F0E8DB;
+    --sand: #E7D7C0;
+    --teal: #0E3A2D;
+    --teal-dark: #0B3126;
+    --palm: #3A6B35;
+    --coral: #F75A3D;
+    --golden: #FED260;
+    --sky: #B6D4EA;
+    --slate: #4A4E58;
+    --rust-dark: #A7372C;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { font-family: 'Roca', Georgia, 'Times New Roman', serif; background: var(--cream); color: var(--teal); line-height: 1.55; -webkit-font-smoothing: antialiased; }
+  a { color: var(--teal); }
+  a:hover { color: var(--coral); }
+  .ff-display { font-family: 'TAN Headline', Georgia, serif; font-weight: 700; letter-spacing: -0.01em; text-transform: uppercase; }
+  .ff-sans { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+
+  .wrap { max-width: 980px; margin: 0 auto; padding: 2rem 1.25rem 5rem; }
+
+  /* Top brand bar */
+  .brand-bar {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 1rem 1.25rem; max-width: 980px; margin: 0 auto;
+    border-bottom: 1px solid rgba(14, 58, 45, 0.08);
+  }
+  .brand-bar .logo { font-family: 'TAN Headline', Georgia, serif; font-size: 1.1rem; color: var(--teal); letter-spacing: 0.02em; text-decoration: none; text-transform: uppercase; }
+  .brand-bar .meta { font-size: 0.8rem; color: var(--slate); text-transform: uppercase; letter-spacing: 0.12em; }
+
+  /* Hero */
+  .hero .eyebrow {
+    font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.22em;
+    color: var(--slate); margin-bottom: 0.75rem;
+    display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;
+  }
+  .hero h1 { font-family: 'TAN Headline', Georgia, serif; font-size: clamp(2rem, 5vw, 3.25rem); line-height: 1.15; margin-bottom: 1rem; text-transform: uppercase; padding-bottom: 0.08em; }
+  .hero p { font-size: 1.05rem; max-width: 62ch; color: var(--teal); opacity: 0.85; }
+
+  /* Sections */
+  section.card {
+    background: #fff;
+    border: 1px solid var(--sand);
+    border-radius: 16px;
+    padding: 1.75rem 1.75rem 1.5rem;
+    margin-top: 1.75rem;
+    box-shadow: 0 1px 0 rgba(14,58,45,0.03), 0 8px 24px -18px rgba(14,58,45,0.15);
+  }
+  section.card h2 { font-family: 'TAN Headline', Georgia, serif; font-size: 1.6rem; line-height: 1.25; margin-bottom: 0.3rem; text-transform: uppercase; padding-bottom: 0.1em; }
+  section.card .section-sub { font-size: 0.85rem; color: var(--slate); margin-bottom: 1.25rem; }
+  .section-head { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; flex-wrap: wrap; }
+  .tag { display: inline-block; font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; padding: 3px 9px; border-radius: 999px; background: var(--sand); color: var(--teal); }
+
+  /* Buttons */
+  .btn {
+    display: inline-flex; align-items: center; gap: 0.4rem;
+    padding: 0.55rem 0.95rem; font-family: 'Inter', sans-serif; font-size: 0.85rem; font-weight: 600;
+    border-radius: 999px; border: 1px solid transparent; cursor: pointer;
+    text-decoration: none; transition: background 0.15s, color 0.15s, border-color 0.15s;
+    white-space: nowrap; user-select: none;
+  }
+  .btn-solid { background: var(--teal); color: #fff; }
+  .btn-solid:hover { background: var(--palm); color: #fff; }
+  .btn-ghost { background: transparent; color: var(--teal); border-color: var(--teal); }
+  .btn-ghost:hover { background: var(--teal); color: #fff; }
+  .btn-chip { background: var(--sand); color: var(--teal); font-weight: 500; font-size: 0.82rem; padding: 0.45rem 0.85rem; }
+  .btn-chip:hover { background: var(--golden); }
+  .btn.copied { background: var(--golden) !important; color: var(--teal) !important; border-color: var(--golden) !important; }
+  .btn-icon { width: 14px; height: 14px; }
+
+  /* Facts */
+  .facts-row {
+    display: flex; justify-content: space-between; gap: 1rem; align-items: flex-start;
+    padding: 0.85rem 0; border-top: 1px solid var(--sand);
+    flex-wrap: wrap;
+  }
+  .facts-row:first-child { border-top: none; padding-top: 0; }
+  .facts-row .lbl { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--slate); }
+  .facts-row .val { font-size: 0.95rem; color: var(--teal); }
+  .facts-left { flex: 1 1 14rem; min-width: 0; }
+
+  /* Email */
+  .email-head {
+    background: var(--cream-warm);
+    margin: -1.75rem -1.75rem 0;
+    padding: 1.5rem 1.75rem 1.25rem;
+    border-bottom: 1px solid var(--sand);
+    border-radius: 16px 16px 0 0;
+  }
+  .email-card { padding-top: 0 !important; overflow: hidden; }
+  .email-meta { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.16em; color: var(--slate); }
+  .subject-group, .preheader-group { margin-top: 1rem; }
+  .subject-group .group-lbl, .preheader-group .group-lbl { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.14em; color: var(--slate); margin-bottom: 0.5rem; display: block; }
+  .chips { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+  .preheader-val { display: inline-block; background: #fff; border: 1px solid var(--sand); border-radius: 8px; padding: 0.4rem 0.75rem; font-size: 0.88rem; }
+  .preheader-wrap { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; }
+
+  .email-body { padding: 1.5rem 0 1.25rem; }
+  .email-body p { margin-bottom: 0.85rem; font-size: 0.98rem; line-height: 1.62; }
+  .email-body ul { margin: 0 0 0.85rem 1.25rem; }
+  .email-body li { margin-bottom: 0.4rem; font-size: 0.98rem; }
+  .email-body table { margin-bottom: 0.85rem; }
+  .email-body table td { padding: 0.2rem 0; vertical-align: top; }
+  .email-body table td:first-child { font-weight: 700; padding-right: 1rem; white-space: nowrap; }
+  .email-body .cta-label { font-weight: 700; margin-top: 0.25rem; }
+  .email-body a { text-decoration: underline; text-decoration-color: var(--coral); text-decoration-thickness: 1.5px; text-underline-offset: 3px; }
+
+  .email-foot {
+    background: var(--cream-warm);
+    margin: 0 -1.75rem -1.5rem;
+    padding: 1rem 1.75rem;
+    border-top: 1px solid var(--sand);
+    border-radius: 0 0 16px 16px;
+    display: flex; flex-wrap: wrap; gap: 0.5rem;
+  }
+
+  /* Photos */
+  .photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1rem;
+  }
+  .photo {
+    background: var(--cream-warm); border: 1px solid var(--sand); border-radius: 12px; overflow: hidden;
+    display: flex; flex-direction: column;
+  }
+  .photo .thumb { width: 100%; aspect-ratio: 4 / 3; background: var(--sand) center/cover no-repeat; }
+  .photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .photo .caption { padding: 0.65rem 0.75rem 0.75rem; display: flex; flex-direction: column; gap: 0.5rem; }
+  .photo .alt { font-size: 0.75rem; color: var(--slate); line-height: 1.4;
+    display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+  }
+  .photo .actions { display: flex; gap: 0.35rem; flex-wrap: wrap; }
+
+  /* Contact */
+  section.card.contact { background: var(--teal); color: var(--cream); border-color: var(--teal-dark); }
+  section.card.contact h2, section.card.contact p { color: var(--cream); }
+  section.card.contact p { opacity: 0.85; }
+  section.card.contact .btn-solid { background: var(--coral); color: var(--teal); }
+  section.card.contact .btn-solid:hover { background: var(--golden); color: var(--teal); }
+  section.card.contact .btn-ghost { color: #fff; border-color: rgba(255,255,255,0.4); background: transparent; }
+  section.card.contact .btn-ghost:hover { background: rgba(255,255,255,0.1); color: #fff; border-color: rgba(255,255,255,0.7); }
+  .contact-cta { margin-top: 1rem; display: flex; flex-wrap: wrap; gap: 0.6rem; }
+
+  .toast {
+    position: fixed; left: 50%; bottom: 2rem; transform: translateX(-50%) translateY(150%);
+    background: var(--teal); color: #fff; padding: 0.65rem 1.1rem; border-radius: 999px;
+    font-family: 'Inter', sans-serif; font-size: 0.85rem; font-weight: 500;
+    box-shadow: 0 8px 24px rgba(14,58,45,0.25);
+    transition: transform 0.25s ease;
+    pointer-events: none; z-index: 9999;
+  }
+  .toast.show { transform: translateX(-50%) translateY(0); }
+
+  @media (max-width: 640px) {
+    .wrap { padding: 1rem 1rem 4rem; }
+    section.card { padding: 1.25rem; border-radius: 14px; }
+    .email-head { margin: -1.25rem -1.25rem 0; padding: 1.25rem; }
+    .email-foot { margin: 0 -1.25rem -1.25rem; padding: 0.85rem 1.25rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="brand-bar">
+  <a class="logo" href="/">SALTY</a>
+  <span class="meta">Partner toolkit · Floripa × SALTY</span>
+</div>
+
+<div class="wrap">
+
+  <header class="hero">
+    <div class="eyebrow"><span>Sicily</span><span>·</span><span>August 9–16, 2026</span><span>·</span><span>Ferragosto week</span></div>
+    <h1>Sicily 2026 — everything you need to share.</h1>
+    <p>Two email drafts, a facts cheat sheet, and <span id="photo-count">20</span> Sicily photos from our library. Copy text, grab images, and use them however you like — no credit required, just send the traffic our way. Questions or tweaks? Email <a href="mailto:hello@getsaltyretreats.com">hello@getsaltyretreats.com</a> and we&rsquo;ll turn them around fast.</p>
+  </header>
+
+  <!-- Quick facts -->
+  <section class="card">
+    <div class="section-head">
+      <div>
+        <h2>Quick facts</h2>
+        <p class="section-sub">The essentials, each copyable with one click.</p>
+      </div>
+    </div>
+    <div id="facts"></div>
+  </section>
+
+  <!-- Emails -->
+  <section class="card email-card" data-email="email-1">
+    <div class="email-head">
+      <div class="section-head">
+        <h2>Email 1 — First touch</h2>
+      </div>
+      <div class="subject-group">
+        <span class="group-lbl">Subject line options (tap to copy)</span>
+        <div class="chips" data-chips="subjects-1"></div>
+      </div>
+      <div class="preheader-group">
+        <span class="group-lbl">Preheader</span>
+        <div class="preheader-wrap">
+          <span class="preheader-val" data-preheader="1"></span>
+          <button class="btn btn-ghost" data-copy-preheader="1"><svg class="btn-icon" viewBox="0 0 20 20" fill="none"><rect x="6" y="6" width="11" height="11" rx="2" stroke="currentColor" stroke-width="1.7"/><path d="M14 6V4.5A1.5 1.5 0 0012.5 3h-7A1.5 1.5 0 004 4.5v7A1.5 1.5 0 005.5 13H7" stroke="currentColor" stroke-width="1.7"/></svg>Copy</button>
+        </div>
+      </div>
+    </div>
+    <div class="email-body" data-body="1"></div>
+    <div class="email-foot">
+      <button class="btn btn-solid" data-copy-rich="1"><svg class="btn-icon" viewBox="0 0 20 20" fill="none"><rect x="6" y="6" width="11" height="11" rx="2" stroke="currentColor" stroke-width="1.7"/><path d="M14 6V4.5A1.5 1.5 0 0012.5 3h-7A1.5 1.5 0 004 4.5v7A1.5 1.5 0 005.5 13H7" stroke="currentColor" stroke-width="1.7"/></svg>Copy email (rich text)</button>
+      <button class="btn btn-ghost" data-copy-plain="1">Copy plain text</button>
+      <button class="btn btn-ghost" data-copy-html="1">Copy HTML source</button>
+    </div>
+  </section>
+
+  <section class="card email-card" data-email="email-2">
+    <div class="email-head">
+      <div class="section-head">
+        <h2>Email 2 — Nudge</h2>
+      </div>
+      <div class="subject-group">
+        <span class="group-lbl">Subject line options (tap to copy)</span>
+        <div class="chips" data-chips="subjects-2"></div>
+      </div>
+      <div class="preheader-group">
+        <span class="group-lbl">Preheader</span>
+        <div class="preheader-wrap">
+          <span class="preheader-val" data-preheader="2"></span>
+          <button class="btn btn-ghost" data-copy-preheader="2"><svg class="btn-icon" viewBox="0 0 20 20" fill="none"><rect x="6" y="6" width="11" height="11" rx="2" stroke="currentColor" stroke-width="1.7"/><path d="M14 6V4.5A1.5 1.5 0 0012.5 3h-7A1.5 1.5 0 004 4.5v7A1.5 1.5 0 005.5 13H7" stroke="currentColor" stroke-width="1.7"/></svg>Copy</button>
+        </div>
+      </div>
+    </div>
+    <div class="email-body" data-body="2"></div>
+    <div class="email-foot">
+      <button class="btn btn-solid" data-copy-rich="2"><svg class="btn-icon" viewBox="0 0 20 20" fill="none"><rect x="6" y="6" width="11" height="11" rx="2" stroke="currentColor" stroke-width="1.7"/><path d="M14 6V4.5A1.5 1.5 0 0012.5 3h-7A1.5 1.5 0 004 4.5v7A1.5 1.5 0 005.5 13H7" stroke="currentColor" stroke-width="1.7"/></svg>Copy email (rich text)</button>
+      <button class="btn btn-ghost" data-copy-plain="2">Copy plain text</button>
+      <button class="btn btn-ghost" data-copy-html="2">Copy HTML source</button>
+    </div>
+  </section>
+
+  <!-- Photos -->
+  <section class="card">
+    <div class="section-head" style="margin-bottom: 1rem;">
+      <div>
+        <h2>Photo library</h2>
+        <p class="section-sub">Sicily shoot. Download individually or copy the URL to embed.</p>
+      </div>
+      <button class="btn btn-solid" id="copy-all-urls">Copy all URLs</button>
+    </div>
+    <div class="photo-grid" id="photo-grid"></div>
+  </section>
+
+  <!-- Contact -->
+  <section class="card contact">
+    <h2>Questions? Just ask.</h2>
+    <p>This is built for your team. If anything here is awkward to use, or you want copy tailored to a segment of your list, hit us up.</p>
+    <div class="contact-cta">
+      <a class="btn btn-solid" href="mailto:hello@getsaltyretreats.com">Email hello@getsaltyretreats.com</a>
+      <a class="btn btn-ghost" href="https://wa.me/14318291135" target="_blank" rel="noreferrer">WhatsApp +1 431-829-1135</a>
+    </div>
+  </section>
+
+</div>
+
+<div class="toast" id="toast">Copied</div>
+
+<script src="sicily-photos.js"></script>
+<script>
+/* -------- Email content -------- */
+const EMAILS = {
+  1: {
+    subjects: [
+      'A summer invitation from our friends at SALTY',
+      'Something different this August: Sicily with SALTY',
+      'A Ferragosto week we wanted you to know about',
+    ],
+    preheader: 'Daily yoga, Italian summer, and a different kind of retreat energy.',
+    blocks: [
+      { kind: 'p', html: 'Hi [First name],' },
+      { kind: 'p', html: 'Our friends at <strong>SALTY Retreats</strong> are running a week in Sicily this August — August 9–16 — right through Ferragosto, Italy\u2019s iconic summer holiday week. SALTY\u2019s retreats offer yoga, pilates, HIIT, and more workout styles! We wanted to share it with the people on our list who\u2019ve been curious about adding more movement, more community, and a little more summer-in-Italy energy.' },
+      { kind: 'p', html: 'SALTY in Sicily offers daily yoga, plus more. Mornings still start on the mat. But the week also folds in SALTY\u2019s beach workouts, pilates sessions, and strength training — for anyone who enjoys new movement styles, and new friends.' },
+      { kind: 'p', html: 'It\u2019s Ferragosto, and SALTY knows how to celebrate the occasion properly. Beach clubs, long Sicilian lunches with feet in the sand, pizza served family style, BBQ dinners, a Siracusa day trip. It\u2019s one of the only weeks of the year Italy truly stops and celebrates — and SALTY\u2019s built a week that lets you enjoy it while still offering the chances to sweat AND rest so you\u2019ll end the week feeling healthy and full.' },
+      { kind: 'p', html: 'A real community. 35–45 travelers, coached by Erin, Nate, Nicolina, and Kennedy. The SALTY crowd tends to show up with energy, people who want to move, eat well, stay up a little later, but still get their rest in.' },
+      { kind: 'p', html: 'An honest note: this won\u2019t be the most restorative week of your year. SALTY leans energetic — more sweat, more celebration, less stillness, and... it\u2019s Ferragosto! If that sounds like exactly what you\u2019re craving this summer, you\u2019ll feel right at home. If you\u2019re looking for a quiet reset, another week at Floripa might suit you!' },
+      { kind: 'p', html: 'Beachside accommodation at Maria del Focallo, daily breakfast, lunches at Zuma Beach Club, select group dinners, airport transfers, bikes, coached workouts + yoga, and more — from $2,149 USD (shared), $2,399 (double), or $3,449 (single).' },
+      { kind: 'cta', label: 'To learn more:', items: [
+        { label: 'Full details', href: 'https://getsaltyretreats.com/retreats/sicily-fitness-retreat' },
+        { label: 'hello@getsaltyretreats.com', href: 'mailto:hello@getsaltyretreats.com' },
+        { label: 'WhatsApp +1 431-829-1135', href: 'https://wa.me/14318291135' },
+      ]},
+      { kind: 'signoff', html: 'Warmly,<br>The Floripa team' },
+    ],
+  },
+  2: {
+    subjects: [
+      'A day in Sicily with SALTY',
+      'One more nudge on Sicily (and then we\u2019ll stop)',
+      'What a Wednesday looks like at SALTY Sicily',
+    ],
+    preheader: 'For anyone who bookmarked our first note and hasn\u2019t opened it again.',
+    blocks: [
+      { kind: 'p', html: 'Hi [First name],' },
+      { kind: 'p', html: 'Quick follow-up on SALTY\u2019s Sicily week (Aug 9–16) — a few of you wrote back after our last email asking what a day actually <em>looks</em> like. Here\u2019s the answer:' },
+      { kind: 'schedule', rows: [
+        { time: '7:30 AM', text: 'Morning yoga in the shala. Optional, but always a great way to wake up.' },
+        { time: '9:00 AM', text: 'Breakfast, buffet style and slow. Enjoy your espresso.' },
+        { time: '10:30 AM', text: 'Beach workout or pilates with the SALTY coaches. Sweat-earning-an-Aperol kind of session.' },
+        { time: '1:00 PM', text: 'Lunch at Zuma Beach Club, feet in the sand. Stay for two hours.' },
+        { time: '4:00 PM', text: 'Free. Siesta, swim, bike into town, nap in a hammock.' },
+        { time: '6:30 PM', text: 'Team dinner, either at Floripa or Zuma, or maybe in town.' },
+        { time: '8:30 PM', text: 'We wind it down with restorative yin yoga, or the occasional cocktail party and celebration.' },
+      ]},
+      { kind: 'p', html: 'Some days swap in a Siracusa excursion, a Ferragosto beach club afternoon, or a pizza night in town. But the general SALTY flow stays the same: move in the morning, eat like you mean it, rest in the middle, gather at night.' },
+      { kind: 'p', html: 'A few reasons we\u2019re bringing it to you now:' },
+      { kind: 'ul', items: [
+        'The group is filling up, and Sicily for Ferragosto is such a unique experience.',
+        'A $350 deposit holds your spot — the rest is split in two payments, the last one 30 days out.',
+      ]},
+      { kind: 'p', html: 'If you\u2019ve been on the fence, this is a good week to decide.' },
+      { kind: 'cta', label: 'To move forward or ask anything:', items: [
+        { label: 'Retreat page', href: 'https://getsaltyretreats.com/retreats/sicily-fitness-retreat' },
+        { label: 'hello@getsaltyretreats.com', href: 'mailto:hello@getsaltyretreats.com' },
+        { label: 'WhatsApp +1 431-829-1135', href: 'https://wa.me/14318291135' },
+      ]},
+      { kind: 'p', html: 'And if it\u2019s not your year — no hard feelings. We\u2019ll be back with our own lineup soon.' },
+      { kind: 'signoff', html: 'Warmly,<br>The Floripa team' },
+    ],
+  },
+};
+
+const FACTS = [
+  { lbl: 'Retreat',       val: 'SALTY Sicily — Endless Summer',                                 copy: 'SALTY Sicily — Endless Summer' },
+  { lbl: 'Dates',         val: 'August 9–16, 2026 (7 nights, Ferragosto week)',                  copy: 'August 9–16, 2026 (7 nights, Ferragosto week)' },
+  { lbl: 'Location',      val: 'Maria del Focallo, Ragusa, Sicily — fly into Catania (CTA)',     copy: 'Maria del Focallo, Ragusa, Sicily. Airport: Catania (CTA).' },
+  { lbl: 'Group',         val: '35–45 guests · Coaches: Erin, Nate, Nicolina, Kennedy',          copy: '35–45 guests. Coaches: Erin, Nate, Nicolina Leone, Kennedy Banton.' },
+  { lbl: 'Pricing (USD)', val: '$2,149 shared · $2,399 double · $3,449 single · $350 deposit',   copy: 'From $2,149 USD (shared), $2,399 (double), $3,449 (single). $350 deposit holds your spot; balance in two payments, final due 30 days before travel.' },
+  { lbl: 'Retreat page',  val: 'getsaltyretreats.com/retreats/sicily-fitness-retreat',           copy: 'https://getsaltyretreats.com/retreats/sicily-fitness-retreat' },
+  { lbl: 'Email',         val: 'hello@getsaltyretreats.com',                                     copy: 'hello@getsaltyretreats.com' },
+  { lbl: 'WhatsApp',      val: '+1 431-829-1135',                                                copy: 'https://wa.me/14318291135' },
+];
+
+/* -------- Helpers: plain + html serialization -------- */
+function stripTags(html) {
+  return html
+    .replace(/<br\s*\/?\s*>/gi, '\n')
+    .replace(/<\/p>/gi, '\n\n')
+    .replace(/<[^>]+>/g, '')
+    .replace(/&nbsp;/g, ' ')
+    .replace(/&amp;/g, '&')
+    .trim();
+}
+
+function emailToPlain(e) {
+  const out = [];
+  out.push('Subject: ' + e.subjects[0]);
+  out.push('Preheader: ' + e.preheader);
+  out.push('');
+  for (const b of e.blocks) {
+    if (b.kind === 'p' || b.kind === 'signoff') out.push(stripTags(b.html));
+    else if (b.kind === 'ul') for (const i of b.items) out.push('  • ' + i);
+    else if (b.kind === 'schedule') for (const r of b.rows) out.push(r.time + ' — ' + r.text);
+    else if (b.kind === 'cta') {
+      out.push(b.label);
+      for (const i of b.items) out.push('  • ' + i.label + ' → ' + i.href);
+    }
+    out.push('');
+  }
+  return out.join('\n').replace(/\n{3,}/g, '\n\n').trim();
+}
+
+function emailToHtml(e) {
+  const body = [];
+  for (const b of e.blocks) {
+    if (b.kind === 'p') body.push('<p style="margin:0 0 16px 0;">' + b.html + '</p>');
+    else if (b.kind === 'ul') body.push('<ul style="margin:0 0 16px 0;padding-left:20px;">' + b.items.map(i => '<li style="margin:0 0 8px 0;">' + i + '</li>').join('') + '</ul>');
+    else if (b.kind === 'schedule') body.push('<table cellpadding="0" cellspacing="0" style="margin:0 0 16px 0;border-collapse:collapse;">' + b.rows.map(r => '<tr><td style="padding:6px 16px 6px 0;font-weight:bold;vertical-align:top;white-space:nowrap;">' + r.time + '</td><td style="padding:6px 0;">' + r.text + '</td></tr>').join('') + '</table>');
+    else if (b.kind === 'cta') body.push('<p style="margin:0 0 8px 0;"><strong>' + b.label + '</strong></p><ul style="margin:0 0 16px 0;padding-left:20px;">' + b.items.map(i => '<li style="margin:0 0 6px 0;"><a href="' + i.href + '">' + i.label + '</a></li>').join('') + '</ul>');
+    else if (b.kind === 'signoff') body.push('<p style="margin:24px 0 0 0;">' + b.html + '</p>');
+  }
+  return '<div style="font-family:Georgia,\'Times New Roman\',serif;line-height:1.55;color:#222;max-width:620px;">' + body.join('\n') + '</div>';
+}
+
+/* -------- Clipboard -------- */
+const toast = document.getElementById('toast');
+function showToast(msg) {
+  toast.textContent = msg || 'Copied';
+  toast.classList.add('show');
+  clearTimeout(showToast._t);
+  showToast._t = setTimeout(() => toast.classList.remove('show'), 1300);
+}
+function flashButton(btn) {
+  if (!btn) return;
+  btn.classList.add('copied');
+  const original = btn.dataset.origText;
+  setTimeout(() => btn.classList.remove('copied'), 1300);
+}
+async function copyText(text, btn) {
+  try {
+    await navigator.clipboard.writeText(text);
+    flashButton(btn);
+    showToast('Copied');
+  } catch (e) {
+    // Fallback
+    const ta = document.createElement('textarea');
+    ta.value = text; ta.style.position = 'fixed'; ta.style.opacity = '0';
+    document.body.appendChild(ta); ta.select();
+    try { document.execCommand('copy'); flashButton(btn); showToast('Copied'); }
+    catch (_) { showToast('Copy failed'); }
+    ta.remove();
+  }
+}
+async function copyRich(html, text, btn) {
+  if (window.ClipboardItem) {
+    try {
+      await navigator.clipboard.write([new ClipboardItem({
+        'text/html': new Blob([html], { type: 'text/html' }),
+        'text/plain': new Blob([text], { type: 'text/plain' }),
+      })]);
+      flashButton(btn); showToast('Copied (rich text)'); return;
+    } catch (e) { /* fall through */ }
+  }
+  await copyText(text, btn);
+}
+
+/* -------- Render facts -------- */
+const factsEl = document.getElementById('facts');
+for (const f of FACTS) {
+  const row = document.createElement('div');
+  row.className = 'facts-row';
+  row.innerHTML =
+    '<div class="facts-left">' +
+      '<div class="lbl">' + f.lbl + '</div>' +
+      '<div class="val">' + f.val + '</div>' +
+    '</div>' +
+    '<button class="btn btn-ghost">Copy</button>';
+  row.querySelector('button').addEventListener('click', (e) => copyText(f.copy, e.currentTarget));
+  factsEl.appendChild(row);
+}
+
+/* -------- Render emails -------- */
+function renderEmailBody(e) {
+  const parts = [];
+  for (const b of e.blocks) {
+    if (b.kind === 'p') parts.push('<p>' + b.html + '</p>');
+    else if (b.kind === 'ul') parts.push('<ul>' + b.items.map(i => '<li>' + i + '</li>').join('') + '</ul>');
+    else if (b.kind === 'schedule') parts.push('<table><tbody>' + b.rows.map(r => '<tr><td>' + r.time + '</td><td>' + r.text + '</td></tr>').join('') + '</tbody></table>');
+    else if (b.kind === 'cta') parts.push('<p class="cta-label">' + b.label + '</p><ul>' + b.items.map(i => '<li><a href="' + i.href + '" target="_blank" rel="noreferrer">' + i.label + '</a></li>').join('') + '</ul>');
+    else if (b.kind === 'signoff') parts.push('<p>' + b.html + '</p>');
+  }
+  return parts.join('');
+}
+
+for (const id of ['1', '2']) {
+  const e = EMAILS[id];
+  document.querySelector('[data-preheader="' + id + '"]').textContent = e.preheader;
+  const chipsEl = document.querySelector('[data-chips="subjects-' + id + '"]');
+  for (const s of e.subjects) {
+    const btn = document.createElement('button');
+    btn.className = 'btn btn-chip';
+    btn.innerHTML = '<span>' + s + '</span><svg class="btn-icon" viewBox="0 0 20 20" fill="none"><rect x="6" y="6" width="11" height="11" rx="2" stroke="currentColor" stroke-width="1.7"/><path d="M14 6V4.5A1.5 1.5 0 0012.5 3h-7A1.5 1.5 0 004 4.5v7A1.5 1.5 0 005.5 13H7" stroke="currentColor" stroke-width="1.7"/></svg>';
+    btn.addEventListener('click', () => copyText(s, btn));
+    chipsEl.appendChild(btn);
+  }
+  document.querySelector('[data-body="' + id + '"]').innerHTML = renderEmailBody(e);
+  document.querySelector('[data-copy-preheader="' + id + '"]').addEventListener('click', (ev) => copyText(e.preheader, ev.currentTarget));
+  document.querySelector('[data-copy-rich="' + id + '"]').addEventListener('click', (ev) => copyRich(emailToHtml(e), emailToPlain(e), ev.currentTarget));
+  document.querySelector('[data-copy-plain="' + id + '"]').addEventListener('click', (ev) => copyText(emailToPlain(e), ev.currentTarget));
+  document.querySelector('[data-copy-html="' + id + '"]').addEventListener('click', (ev) => copyText(emailToHtml(e), ev.currentTarget));
+}
+
+/* -------- Render photos -------- */
+const PHOTOS = window.__SICILY_PHOTOS__ || [];
+document.getElementById('photo-count').textContent = PHOTOS.length;
+
+const grid = document.getElementById('photo-grid');
+for (const p of PHOTOS) {
+  const fig = document.createElement('figure');
+  fig.className = 'photo';
+  const thumbUrl = p.url + '?w=900&auto=format&q=70';
+  const fullUrl = p.url + '?dl=' + encodeURIComponent(p.name);
+  fig.innerHTML =
+    '<div class="thumb">' +
+      '<img loading="lazy" alt="' + (p.alt || 'SALTY Sicily').replace(/"/g, '&quot;') + '" src="' + thumbUrl + '" ' + (p.lqip ? 'style="background-image:url(' + p.lqip + ');background-size:cover"' : '') + '>' +
+    '</div>' +
+    '<figcaption class="caption">' +
+      (p.alt ? '<p class="alt">' + p.alt + '</p>' : '') +
+      '<div class="actions">' +
+        '<a class="btn btn-solid" href="' + fullUrl + '" download="' + p.name + '">Download</a>' +
+        '<button class="btn btn-ghost" data-copy-url="' + p.url + '">Copy URL</button>' +
+      '</div>' +
+    '</figcaption>';
+  fig.querySelector('[data-copy-url]').addEventListener('click', (e) => copyText(p.url, e.currentTarget));
+  grid.appendChild(fig);
+}
+
+document.getElementById('copy-all-urls').addEventListener('click', (e) => {
+  const all = PHOTOS.map(p => p.url).join('\n');
+  copyText(all, e.currentTarget);
+});
+</script>
+</body>
+</html>
